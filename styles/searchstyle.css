@@ -1,0 +1,11 @@
+body{
+    color: brown;
+}
+
+.input-group{
+    width: 30%;
+}
+
+.form-control{
+    width: 30px;
+}
