@@ -1,11 +1,39 @@
-body{
-    color: brown;
-}
 
 .input-group{
     width: 30%;
 }
 
-.form-control{
+div.form-control{
     width: 30px;
+}
+
+div.container-fluid {
+    /* background-color: aliceblue; */
+    width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+div.storelist{
+    margin: 50px;
+    
+}
+
+.d-flex{
+    margin: 10px;
+}
+
+.navbar{
+    margin: 50px;
+}
+
+div.card-header{
+    background-color: #1f363d;
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+div.card-body{
+    background-color: #cfe0c3;
 }
