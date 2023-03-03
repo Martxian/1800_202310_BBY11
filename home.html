@@ -40,54 +40,7 @@
     <!------------------------------>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-          
-                <li>
-                  <a class="dropdown-item" href="searchstore.html">SEARCH</a>
-                </li>
-                <hr class="dropdown-divider" />
-
-                <li><a class="dropdown-item" href="#">FAVORITE</a></li>
-
-                <hr class="dropdown-divider" />
-
-                <li><a class="dropdown-item" href="#">WEATHER FORECAST</a></li>
-              </ul>
-
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
+    <nav id="navbarPlaceholder"></nav>
 
     <!-- Hero -->
     <div class="p-5 mb-4 bg-light rounded-3">
@@ -101,42 +54,16 @@
     </div>
 
     <!-- Footer -->
-    <footer class="navbar bg-info fixed-bottom">
-      <div class="container">
-        <a href="index.html"><span class="material-icons">home</span></a>
-        <!-- <a href=""><span class="material-icons">menu</span></a> -->
-        <div
-          class="btn-group"
-          role="group"
-          aria-label="Button group with nested dropdown"
-        >
-          <div class="btn-group" role="group">
-            <button
-              id="btnGroupDrop1"
-              type="button"
-              class="btn btn-secondary dropdown-toggle"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <span class="material-icons">menu</span>
-            </button>
-            
-            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <a class="dropdown-item" href="#">Dropdown link</a>
-              <a class="dropdown-item" href="#">Dropdown link</a>
-            </div>
-          </div>
-        </div>
-        <a href="#"><span class="material-icons">favorite</span></a>
-      </div>
-    </footer>
+    <nav id="footerPlaceholder"></nav>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
 
     <!-- Link to scripts of your own -->
+    <script src="./scripts/firebaseAPI_TEAM11.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/skeleton.js"></script>
     <!-- <script src="./scripts/script.js"></script> -->
   </body>
 </html>
