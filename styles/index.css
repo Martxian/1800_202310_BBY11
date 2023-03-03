@@ -1,0 +1,23 @@
+.Container{
+    display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 10px;
+}
+
+body {
+background-color: grey;
+}
+.Header {
+  color: red;
+  background-color: ;
+}
+
+.Header2 {
+}
+
+.Logo {
+    padding: 2rem;
+    color: red;
+text-align: center;
+height: 300px;
+}
