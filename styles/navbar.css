@@ -15,7 +15,7 @@ body {
   left: 0;
   width: 100%;
   padding: 15px 200px;
-  background: #4a98f7;
+  background: #0c9b3c;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .nav,
@@ -131,7 +131,7 @@ a {
     left: 0;
   }
   .nav .navOpenBtn {
-    color: #fff;
+    color: #fcf7f7;
     font-size: 20px;
     cursor: pointer;
   }
@@ -139,7 +139,7 @@ a {
     position: absolute;
     top: 20px;
     right: 20px;
-    color: #fff;
+    color: #5e1212;
     font-size: 20px;
     cursor: pointer;
   }
