@@ -1,39 +1,43 @@
-
-.input-group{
-    width: 30%;
+#search-bar {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 35px;
+  width: 300px;
+  max-width: 100%;
 }
 
-div.form-control{
-    width: 30px;
+#search-button {
+  font-size: 16px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-div.container-fluid {
-    /* background-color: aliceblue; */
-    width: fit-content;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 30px;
+#search-button:hover {
+  background-color: #3367d6;
 }
 
-div.storelist{
-    margin: 50px;
-    
+#store-dropdown{
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200x;
+  max-width: 100%;
 }
 
-.d-flex{
-    margin: 10px;
+#map {
+  width: 80%;
+  height: 400px;
+  margin: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: center;
 }
 
-.navbar{
-    margin: 50px;
-}
-
-div.card-header{
-    background-color: #1f363d;
-    color: aliceblue;
-    font-weight: bolder;
-}
-
-div.card-body{
-    background-color: #cfe0c3;
+body{
+  align-items: center;
 }
