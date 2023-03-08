@@ -34,9 +34,9 @@ function showStoresOnMap() {
                         console.log(lat, lng);
                         coordinates = [lng, lat];
                         console.log(coordinates);
-                        //read name and the details of hike
+                        //read name and the status of stores
                         event_name = doc.data().name; // Event Name
-                        preview = doc.data().details; // Text Preview
+                        preview = doc.data().status; // Text Preview
 
 
                         // Pushes information into the features array
