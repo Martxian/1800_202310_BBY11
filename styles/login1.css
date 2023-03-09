@@ -1,0 +1,20 @@
+.firebaseui-container {
+    background-color: aliceblue;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: rgba(16, 218, 154, 0.87);
+    direction: ltr;
+    font: 16px Roboto, arial, sans-serif;
+    margin: 20px auto;
+    max-width: 360px;
+    /** This is needed for the invisible reCAPTCHA badge to show. */
+    overflow: visible;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+
+
+  
+

@@ -3,8 +3,8 @@ function displayStoreInfo() {
     let ID = params.searchParams.get( "docID" ); //get value for key "id"
     console.log( ID );
 
-    // doublecheck: is your collection called "Reviews" or "reviews"?
-    db.collection( "stores" )
+    // doublecheck: is your collection called "Stores" or "stores"?
+    db.collection( "Stores" )
         .doc( ID )
         .get()
         .then( doc => {
