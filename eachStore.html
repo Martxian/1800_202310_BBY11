@@ -27,6 +27,7 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css">
 
     <!-- Other libraries go here -->
+    <link rel="stylesheet" href="./styles/eachStore.css" />\
 
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -42,9 +43,11 @@
 
     <!-- Store Container -->
     <div class="container">
-        <h1><span id="storeName">this Store</span></h1>
+        <button onclick="window.location.href='updatePage.html'" class="btn btn-primary btn-lg" type="button">update</button>
+        <button onclick="window.location.href=''" class="btn btn-primary btn-lg" type="button">save</button>
+        <h1><span id="storeName">Store name</span></h1>
         <img class="store-img responsive" src="" />
-        <div id="details-go-here"></div>
+        <div><span id="storeDetail">asdasda</span></div>
     </div>
 
     <!-- Footer -->

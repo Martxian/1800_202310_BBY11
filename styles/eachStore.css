@@ -1,0 +1,16 @@
+.btn-primary{
+    background-color: #F1FFC4;
+    border-radius: 10px;
+    border-color: #E3E7Af;
+    color: #679289;
+    font-weight: 700;
+    font-size: small;
+    display: inline;
+    float: right;
+    margin: 3px;
+}
+
+.btn-primary:hover{
+    background-color:#679289 ;
+    border-color: #E3E7Af;
+}
