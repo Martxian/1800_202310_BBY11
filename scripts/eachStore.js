@@ -4,7 +4,7 @@ function displayStoreInfo() {
     console.log( ID );
 
     // doublecheck: is your collection called "Stores" or "stores"?
-    db.collection( "Stores" )
+    db.collection( "stores" )
         .doc( ID )
         .get()
         .then( doc => {
