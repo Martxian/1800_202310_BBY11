@@ -25,4 +25,52 @@ function writeStores() {
         lng: -122.84851776163062,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     });
+
+    storesRef.add({
+        code: "SOF1",
+        name: "Save-On-Foods", //replace with your own city?
+        location: "15615 104 Ave, Surrey, BC V4N 2H4",
+        city: "Surrey",
+        province: "BC",
+        status: "open",
+        lat: 49.18820767910094,
+        lng: -122.84851776163062,
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
+    });
+
+    storesRef.add({
+        code: "SOF2",
+        name: "Save-On-Foods", //replace with your own city?
+        location: "18710 Fraser Hwy, Surrey, BC V3S 7Y4",
+        city: "Surrey",
+        province: "BC",
+        status: "open",
+        lat: 49.18820767910094,
+        lng: -122.84851776163062,
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
+    });
+
+    storesRef.add({
+        code: "SOF3",
+        name: "Save-On-Foods", //replace with your own city?
+        location: "9014 152 St, Surrey, BC V3R 4E7",
+        city: "Surrey",
+        province: "BC",
+        status: "open",
+        lat: 49.18820767910094,
+        lng: -122.84851776163062,
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
+    });
+
+    storesRef.add({
+        code: "SOF4",
+        name: "Save-On-Foods", //replace with your own city?
+        location: "17745 64 Ave, Surrey, BC V3S 1Z2",
+        city: "Surrey",
+        province: "BC",
+        status: "open",
+        lat: 49.18820767910094,
+        lng: -122.84851776163062,
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
+    });
 }
