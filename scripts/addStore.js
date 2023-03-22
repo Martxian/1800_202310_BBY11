@@ -9,8 +9,8 @@ function writeStores() {
         city: "Surrey",
         province: "BC",
         status: "open",
-        lat: 49.138285813985064,
-        lng: -122.8473362690312,
+        lat: 49.13839829728169, 
+        lng: -122.84726795770024,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     });
 
@@ -21,8 +21,8 @@ function writeStores() {
         city: "Surrey",
         province: "BC",
         status: "open",
-        lat: 49.18820767910094,
-        lng: -122.84851776163062,
+        lat: 49.18716643703221, 
+        lng: -122.84766667304291,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     });
 
@@ -33,8 +33,8 @@ function writeStores() {
         city: "Surrey",
         province: "BC",
         status: "open",
-        lat: 49.18820767910094,
-        lng: -122.84851776163062,
+        lat: 49.19305273429102,
+        lng: -122.78901797768488,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     });
 
@@ -45,8 +45,8 @@ function writeStores() {
         city: "Surrey",
         province: "BC",
         status: "open",
-        lat: 49.18820767910094,
-        lng: -122.84851776163062,
+        lat: 49.12381978295706, 
+        lng: -122.70416174420892,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     });
 
@@ -57,8 +57,8 @@ function writeStores() {
         city: "Surrey",
         province: "BC",
         status: "open",
-        lat: 49.18820767910094,
-        lng: -122.84851776163062,
+        lat: 49.167189496475935, 
+        lng: -122.79903101537138,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     });
 
@@ -69,8 +69,8 @@ function writeStores() {
         city: "Surrey",
         province: "BC",
         status: "open",
-        lat: 49.18820767910094,
-        lng: -122.84851776163062,
+        lat: 49.120129279996924,
+        lng: -122.7316752711927,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     });
 }
