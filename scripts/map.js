@@ -43,7 +43,7 @@ function showStoresOnMap() {
                         features.push({
                             'type': 'Feature',
                             'properties': {
-                                'description': `<strong>${event_name}</strong><p>${preview}</p> <br> <a href="/hike.html?id=${doc.id}" target="_blank" title="Opens in a new window">Read more</a>`
+                                'description': `<strong>${event_name}</strong><p>${preview}</p> <br> <a href="/eachStore.html?id=${doc.id}" target="_blank" title="Opens in a new window">More info</a>`
                             },
                             'geometry': {
                                 'type': 'Point',
