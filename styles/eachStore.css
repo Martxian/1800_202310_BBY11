@@ -14,3 +14,10 @@
     background-color:#679289 ;
     border-color: #E3E7Af;
 }
+
+.material-icons{
+    width: 30px;
+    font-size: 30px;
+    display: flex;
+    float: right;
+}
