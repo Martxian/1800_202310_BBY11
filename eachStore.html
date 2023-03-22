@@ -27,7 +27,7 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css">
 
     <!-- Other libraries go here -->
-    <link rel="stylesheet" href="./styles/eachStore.css" />\
+    <link rel="stylesheet" href="./styles/eachStore.css" />
 
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -42,13 +42,54 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- Store Container -->
-    <div class="container">
+    <!-- <div class="container">
             <i class="material-icons">upload_file_border</i>
             <i class="material-icons">favorite_border</i>
         <h1><span id="storeName">Store name</span></h1>
         <img class="store-img responsive" src="" />
         <div><span id="storeDetail">asdasda</span></div>
+    </div> -->
+
+    <!-- the body of your page goes here -->
+    <!-- stuff -->
+    <div class="container">
+        <h1><span id="storeName">this store</span></h1>
+        <div class="position-relative">
+            <img class="store-img responsive" src="" alt="Store photo">
+            <button class="btn btn-primary position-absolute bottom-0 end-0 m-3"
+                onclick="saveStoreDocumentIDAndRedirect()">Write Review</button>
+        </div>
     </div>
+
+
+
+    <!-- <div class="container">
+        <h2>Reviews:</h2>
+        <div id="details-go-here"></div>
+        <div class="container">
+            <div id="reviewCardGroup" class="row row-cols-auto">
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <template id="reviewCardTemplate">
+        <div class="card bg-secondary">
+            <img class="card-img-top">
+            <div class="card-body bg-light">
+                <h5 class="title">placeholder</h5>
+                <p class="time">placeholder</p>
+                <p class="level">placeholder</p>
+                <p class="season">placeholder</p>
+                <p class="scrambled">placeholder</p>
+                <p class="flooded">placeholder</p>
+                <br>
+                <p class="description">This card has supporting text below as a natural lead-in to additional content.
+                </p>
+            </div>
+        </div>
+    </template> -->
+
+
 
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>
@@ -57,7 +98,7 @@
     <script src="./scripts/firebaseAPI_TEAM11.js"></script>
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/eachStore.js"></script>
-    
+
 </body>
 
 </html>
