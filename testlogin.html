@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GroSURREY Check Login & Registration</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
+    />
+
+    <link rel="stylesheet" href="/styles/login.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- <img src="/images/logo.png" class="logo" /> -->
+    </header>
+
+    <div class="wrapper">
+      <div class="form-box login">
+        <h2>Welcome!</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required />
+            <label>Password</label>
+          </div>
+          
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>
+              Don't have an account?
+              <a href="#" class="register-link">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <input type="text" required />
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><input type="checkbox" /> I agree to the terms &
+              conditions</label
+            >
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <div class="login-register">
+            <p>
+              Already have an account? <a href="#" class="login-link">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="scripts/login.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./scripts/firebaseAPI_TEAM11.js"></script>
+    <script src="./scripts/skeleton.js"></script>
+    <script src="./scripts/authentication.js"></script>
+  </body>
+</html>
