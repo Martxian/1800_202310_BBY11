@@ -42,26 +42,19 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- Store Container -->
-    <!-- <div class="container">
-            <i class="material-icons">upload_file_border</i>
-            <i class="material-icons">favorite_border</i>
-        <h1><span id="storeName">Store name</span></h1>
-        <img class="store-img responsive" src="" />
-        <div><span id="storeDetail">asdasda</span></div>
-    </div> -->
-
-    <!-- the body of your page goes here -->
-    <!-- stuff -->
     <div class="container">
-        <h1><span id="storeName">this store</span></h1>
+        <i class="material-icons">upload_file_border</i>
+        <i class="material-icons">favorite_border</i>
+        <h1><span id="storeName">Store name</span></h1>
         <div class="position-relative">
             <img class="store-img responsive" src="" alt="Store photo">
+            <h6><span id="storeLocation">Location</span></h6>
+            <h6>Status: <span id="storeStatus">Status</span></h6>
             <button class="btn btn-primary position-absolute bottom-0 end-0 m-3"
                 onclick="saveStoreDocumentIDAndRedirect()">Write Review</button>
         </div>
+        <div><span id="storeDetail"></span></div>
     </div>
-
-
 
     <div class="container">
         <h2>Reviews:</h2>
@@ -70,7 +63,7 @@
             <div id="reviewCardGroup" class="row row-cols-auto">
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- <template id="reviewCardTemplate">
         <div class="card bg-secondary">
