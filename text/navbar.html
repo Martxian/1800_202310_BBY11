@@ -3,42 +3,37 @@
 <html lang="en">
 
 <head>
+    <title>Nav Bar</title>
+
+    <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nav Bar</title>
 
+    <!-- Other libraries go here -->
     <link rel="stylesheet" href="styles/navbar.css" />
-
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <script src="scripts/navbar.js" defer></script>
 </head>
 
 <body>
     <nav class="nav">
         <i class="uil uil-bars navOpenBtn"></i>
-
-        <!-- Back Button -->
-        <!-- <form>
-            <input type="button" value="<" onclick="history.back()">
-        </form> -->
         <a href="home.html" class="logo">GroSurrey Check!</a>
 
+        <!-- Main links -->
         <ul class="nav-links">
             <i class="uil uil-times navCloseBtn"></i>
             <li><a href="home.html">Home</a></li>
-            <li><a href="#">Weather</a></li>
-            <li><a href="#">Temperature</a></li>
+            <li><a href="profile.html">Profile</a></li>
             <li><a href="favorite.html">Favorites</a></li>
             <li><a href="index.html" onclick="logout()" id="logOut">Logout</a></li>
         </ul>
 
+        <!-- Map link -->
         <a href="map.html" class="uil uil-search search-icon" id="searchIcon">
-
     </nav>
-
-
-
+    <!-- JavaScript Functions -->
+    <script src="scripts/navbar.js" defer></script>
 </body>
 
 </html>
