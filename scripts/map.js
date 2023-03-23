@@ -36,14 +36,15 @@ function showStoresOnMap() {
                         console.log(coordinates);
                         //read name and the status of stores
                         event_name = doc.data().name; // Status
-                        preview = "Status: " + doc.data().status + doc.data().location; // Text Preview
+                        preview = "Status: " + doc.data().status + "<br/>" + doc.data().location; // Text Preview
 
 
                         // Pushes information into the features array
                         features.push({
                             'type': 'Feature',
                             'properties': {
-                                'description': `<strong>${event_name}</strong><p>${preview}</p> <br> <a href="/eachStore.html?id=${doc.id}" target="_blank" title="Opens in a new window">Read more</a>`
+                                // 'description': `<strong>${event_name}</strong><p>${preview}</p> <br> <button onclick="window.open('/eachStore.html?id=${doc.id}', '_blank')" title="Opens in a new window">Info</button>`
+                                'description': `<strong>${event_name}</strong><p>${preview}</p> <br> <button class="custom-button" onclick="window.open('/eachStore.html?id=${doc.id}', '_blank')" title="Opens in a new window">Info</button>`
                             },
                             'geometry': {
                                 'type': 'Point',
