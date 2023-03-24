@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Replace title with actual stores -->
-    <title>Individual Stores Pages</title>
+    <title>GroSurrey Check</title>
     <meta name="comp1800 project" content="GroSurrey Check">
 
     <!-- Required meta tags -->
@@ -27,7 +26,7 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css">
 
     <!-- Other libraries go here -->
-    <link rel="stylesheet" href="./styles/eachStore.css" />
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
 
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -41,48 +40,47 @@
     <!-- Navbar -->
     <nav id="navbarPlaceholder"></nav>
 
-    <!-- Store Container -->
+    <!-- Content goes here -->
     <div class="container">
-        <!-- <i class="material-icons">upload_file_border</i> -->
-        <i class="material-icons" id="bookmark">favorite_border</i>
-        <h1><span id="storeName">Store name</span></h1>
-        <div class="position-relative">
-            <img class="store-img responsive" src="" alt="Store photo">
-            <h6><span id="storeLocation">Location</span></h6>
-            <h6>Status: <span id="storeStatus">Status</span></h6>
-            <button class="btn btn-primary position-absolute bottom-0 end-0 m-3"
-                onclick="saveStoreDocumentIDAndRedirect()">Update Status</button>
-        </div>
-        <div><span id="storeDetail"></span></div>
-    </div>
-
-    <div class="container">
-        <h2>Reviews:</h2>
-        <div id="details-go-here"></div>
-        <div class="container">
-            <div id="reviewCardGroup" class="row row-cols-auto">
+        <br>
+        <h1><span id="storeName">Store Name</span></h1>
+        <h3><span id="storeLocation">Store Location</span></h3>
+        <br>
+        <!-- Form for updating status -->
+        <form>
+            <!-- Status options -->
+            <label>Status: <span style="display:inline-block; width: 20pt;"></span></label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="status" value="Open">
+                <label>Open</label>
             </div>
-        </div>
-    </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="status" value="Closed">
+                <label>Closed</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="status" value="unSure" checked="">
+                <label>Not sure</label>
+            </div>
 
-    <!-- <template id="reviewCardTemplate">
-        <div class="card bg-secondary">
-            <img class="card-img-top">
-            <div class="card-body bg-light">
-                <h5 class="title">placeholder</h5>
-                <p class="time">placeholder</p>
-                <p class="level">placeholder</p>
-                <p class="season">placeholder</p>
-                <p class="scrambled">placeholder</p>
-                <p class="flooded">placeholder</p>
+            <!-- Reason options -->
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">What is the reason?</label>
+                <select class="form-control" id="reason">
+                    <option>Snowfall</option>
+                    <option>Heatwave</option>
+                    <option>Tornado</option>
+                    <option>Earthquake</option>
+                    <option>Other</option>
+                </select>
                 <br>
-                <p class="description">This card has supporting text below as a natural lead-in to additional content.
-                </p>
             </div>
-        </div>
-    </template>
-
-
+            <br>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-lg btn-primary pull-right" onclick="updateStatus()">Submit</button>
+            </div>
+        </form>
+    </div>
 
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>
@@ -90,8 +88,7 @@
     <!-- JavaScript Functions -->
     <script src="./scripts/firebaseAPI_TEAM11.js"></script>
     <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/eachStore.js"></script>
-
+    <script src="./scripts/updateStatus.js"></script>
 </body>
 
 </html>
