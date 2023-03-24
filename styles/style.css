@@ -1,3 +1,7 @@
+text_color{
+    color: var(--bs-indigo);
+}
+
 .btn{
     background-color: #1F2232;
     color: #C6D8FF; 
@@ -10,7 +14,7 @@
     border-color: var(--bs-indigo);
 }
 
-.bg-success{
-    color: var(--bs-indigo);
-  }
-
+/* background{
+    add to the html div
+    bg-success bg-gradient
+} */

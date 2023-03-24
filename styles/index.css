@@ -1,15 +1,5 @@
-.Container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-}
-
-.Header {
-  color: red;
-  background-color: ;
-}
-
-.Header2 {
+.bg-success{
+  color: var(--bs-indigo);
 }
 
 .Logo {
@@ -17,4 +7,16 @@
   color: red;
   text-align: center;
   height: 300px;
+}
+
+.btn{
+  background-color: #1F2232;
+  color: #C6D8FF; 
+  border-color: #C6D8FF;
+}
+
+.btn:hover{
+  background-color: white;
+  color: var(--bs-indigo);
+  border-color: var(--bs-indigo);
 }
