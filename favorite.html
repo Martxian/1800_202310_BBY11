@@ -46,21 +46,20 @@
         <h1>Favorite store for<span id=name-goes-here></span></h1>
         <!-- Here is container for cards  -->
         <div class="container">
-            <div id="hikeCardGroup" class="row row-cols-auto">
+            <div id="storeCardGroup" class="row row-cols-auto">
             </div>
         </div>
     </div>
 
     <!-- Store Container -->
     <div class="container" id="favoriteCardTemplate">
-
-        <h1><span id="storeName">Store name</span></h1>
+        <h1><span id="storeName" class="card-title">Store name</span></h1>
         <div class="position-relative">
-            <img class="store-img responsive" src="" alt="Store photo">
-            <h6><span id="storeLocation">Location</span></h6>
-            <h6>Status: <span id="storeStatus">Status</span></h6>
-            <button class="btn btn-primary position-absolute bottom-0 end-0 m-3"
-                onclick="saveStoreDocumentIDAndRedirect()">Write Review</button>
+            <img class="card-img responsive" src="" alt="Store photo">
+            <h6><span id="storeLocation" class="card-location">Location</span></h6>
+            <h6>Status: <span id="storeStatus" class="card-status">Status</span></h6>
+            <!-- <button class="btn btn-primary position-absolute bottom-0 end-0 m-3"
+                onclick="saveStoreDocumentIDAndRedirect()">Write Review</button> -->
         </div>
         <div><span id="storeDetail"></span></div>
     </div>
@@ -79,8 +78,8 @@
 
     <!-- JavaScript Functions -->
     <script src="./scripts/firebaseAPI_TEAM11.js"></script>
-    <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/authentication.js"></script>
+    <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/favorite.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
