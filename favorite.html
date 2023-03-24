@@ -27,7 +27,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script> -->
     <link
       type="text/css"
       rel="stylesheet"
@@ -62,19 +62,29 @@
       </div>
 
     <!-- Templates for general use, not displayed -->
-    <template id="favoriteCardTemplate">
+    <!-- <template id="favoriteCardTemplate">
       <div class="card py-2 mx-2 bg-light" style="width: 10rem">
         <img class="card-image card-img-top" src=" ..." alt="..." />
-        <div class="card-body">
+        <div class="card-location">
           <h5 class="card-title">Card title</h5>
-          <p class="card-length">placeholder</p>
+          <div class="card-status"></div>
           <br />
           <a class="btn btn-secondary card-href" id="read-more"
-            >Read more ...</a
-          >
+            >Read more ...</a>
         </div>
       </div>
-    </template>
+    </template> -->
+    <template id="favoriteCardTemplate">
+        <div class="card py-2 mx-2 bg-light" style="width: 50rem">
+          <img class="card-image card-img-top" src=" ..." alt="..." />
+            <h3 class="card-title"></h3>
+            <p class="card-location"></p>
+            <p class="card-status"></p>
+            <a class="btn btn-secondary card-href" id="read-more"
+            >Enter</a>
+          </div>
+        </div>
+      </template>
 
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>
