@@ -71,18 +71,6 @@ function getBookmarks(user) {
              //clone the new card
             let newcard = newcardTemplate.content.cloneNode(true);
 
-            // //NEW LINE: update to display length, duration, last updated
-            // newcard.querySelector(".card-length").innerHTML =
-            //   "Length: " +
-            //   doc.data().length +
-            //   " km <br>" +
-            //   "Duration: " +
-            //   doc.data().hike_time +
-            //   "min <br>" +
-            //   "Last updated: " +
-            //   doc.data().last_updated.toDate().toLocaleDateString();
-
-            //Finally, attach this new card to the gallery
             storeCardGroup.appendChild(newcard);
           });
       });
