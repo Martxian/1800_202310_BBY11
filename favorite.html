@@ -49,20 +49,30 @@
             <div id="hikeCardGroup" class="row row-cols-auto">
             </div>
         </div>
-</div>
+    </div>
 
-<!-- Templates for general use, not displayed -->
-<template id="favoriteCardTemplate">
-        <div class="card py-2 mx-2 bg-light" style="width: 10rem;">
-            <img class="card-image card-img-top" src=" ..." alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-length">placeholder</p>
-                <br>
-                <a class="btn btn-secondary card-href" id="read-more">Read more ...</a>
+    <!-- Store Container -->
+    <div class="container" id="favoriteCardTemplate">
+
+        <h1><span id="storeName">Store name</span></h1>
+        <div class="position-relative">
+            <img class="store-img responsive" src="" alt="Store photo">
+            <h6><span id="storeLocation">Location</span></h6>
+            <h6>Status: <span id="storeStatus">Status</span></h6>
+            <button class="btn btn-primary position-absolute bottom-0 end-0 m-3"
+                onclick="saveStoreDocumentIDAndRedirect()">Write Review</button>
+        </div>
+        <div><span id="storeDetail"></span></div>
+    </div>
+
+    <div class="container">
+        <h2>Reviews:</h2>
+        <div id="details-go-here"></div>
+        <div class="container">
+            <div id="reviewCardGroup" class="row row-cols-auto">
             </div>
         </div>
- </template>
+    </div>
 
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>
