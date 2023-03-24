@@ -20,4 +20,5 @@
     font-size: 30px;
     display: flex;
     float: right;
-}
+    cursor: pointer;
+    }
