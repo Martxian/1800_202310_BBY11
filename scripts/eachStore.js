@@ -64,3 +64,11 @@ function saveBookmark(ID) {
         }
     });
 }
+
+// Function to update store status
+function saveStoreDocumentIDAndRedirect() {
+  let params = new URL(window.location.href) //get the url from the search bar
+  let ID = params.searchParams.get("id");
+  localStorage.setItem('storeDocID', ID);
+  window.location.href = 'updateStatus.html';
+}
