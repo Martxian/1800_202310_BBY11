@@ -1,20 +1,24 @@
-text_color{
-    color: var(--bs-indigo);
+text_color {
+  color: var(--bs-indigo);
 }
 
-.btn{
-    background-color: #1F2232;
-    color: #C6D8FF; 
-    border-color: #C6D8FF;
+.btn {
+  background-color: #1f2232;
+  color: #c6d8ff;
+  border-color: #c6d8ff;
+  font-weight: 700;
 }
 
-.btn:hover{
-    background-color: white;
-    color: var(--bs-indigo);
-    border-color: var(--bs-indigo);
+.btn:hover {
+  background-color: white;
+  color: #1f2232;
+  border-color: #1f2232;
 }
 
-/* background{
-    add to the html div
-    bg-success bg-gradient
-} */
+.custom-bg{
+    background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
+    color: #1F2232;
+  }
+
+/* make a text center */
+/* add div class 'text-center' */
