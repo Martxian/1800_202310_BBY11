@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
+
+<head>
+    <title>Nav Bar</title>
+
+    <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nav Bar</title>
 
+    <!-- Other libraries go here -->
     <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
 
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <script src="scripts/navbar.js" defer></script>
-  </head>
-  <body>
+<body>
     <nav class="nav">
-      <i class="uil uil-bars navOpenBtn"></i>
-      <a href="home.html" class="logo">GroSurrey Check!</a>
+        <i class="uil uil-bars navOpenBtn"></i>
+        <a href="home.html" class="logo">GroSurrey Check!</a>
 
-      <ul class="nav-links">
-        <i class="uil uil-times navCloseBtn"></i>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="#">Weather</a></li>
-        <li><a href="#">Temperature</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
+        <!-- Main links -->
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
 
-      <a href="map.html" class="uil uil-search search-icon" id="searchIcon">
-      
+        <!-- Map link -->
+        <a href="map.html" class="uil uil-search search-icon" id="searchIcon">
     </nav>
-        
-        
-    
-  </body>
+
+    <!-- JavaScript Functions -->
+    <script src="scripts/navbar.js" defer></script>
+</body>
+
 </html>

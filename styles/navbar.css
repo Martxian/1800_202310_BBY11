@@ -15,7 +15,7 @@ body {
   left: 0;
   width: 100%;
   padding: 15px 200px;
-  background: #0c9b3c;
+  background: #C8D6E5;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .nav,
@@ -27,12 +27,12 @@ body {
   justify-content: space-between;
 }
 a {
-  color: #fff;
+  color: #1F2232;
   text-decoration: none;
 }
 .nav .logo {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .nav .nav-links {
   column-gap: 20px;
@@ -40,6 +40,7 @@ a {
 }
 .nav .nav-links a {
   transition: all 0.2s linear;
+  color: white;
 }
 .nav.openSearch .nav-links a {
   opacity: 0;
