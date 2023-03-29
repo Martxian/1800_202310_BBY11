@@ -1,9 +1,9 @@
 .btn-primary{
-    background-color: #F1FFC4;
-    border-radius: 10px;
-    border-color: #E3E7Af;
-    color: #679289;
-    font-weight: 700;
+    background-color: #1f2232;
+        color: #c6d8ff;
+        border-color: #c6d8ff;
+        font-weight: 700;
+    
     font-size: small;
     display: inline;
     float: right;
@@ -11,8 +11,9 @@
 }
 
 .btn-primary:hover{
-    background-color:#679289 ;
-    border-color: #E3E7Af;
+    background-color: white;
+    color: #1f2232;
+    border-color: #1f2232;
 }
 
 .material-icons{
@@ -22,3 +23,5 @@
     float: right;
     cursor: pointer;
     }
+
+

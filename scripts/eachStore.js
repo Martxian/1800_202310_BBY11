@@ -1,6 +1,7 @@
 //display Store info for the store that was clicked
 
 function displayStoreInfo() {
+  let cardTemplate = document.getElementById("storeTemplate"); 
   let params = new URL(window.location.href); //get URL of search bar
   let ID = params.searchParams.get("id"); //get value for key "id"
   console.log(ID);
@@ -16,17 +17,22 @@ function displayStoreInfo() {
       storeLocation = doc.data().location;
       storeStatus = doc.data().status;
 
-      // only populate storeName, and image
-      document.getElementById("storeName").innerHTML = storeName;
-      document.getElementById("storeLocation").innerHTML = storeLocation;
-      document.getElementById("storeStatus").innerHTML = storeStatus;
-      
-      let imgEvent = document.querySelector(".store-img");
-      imgEvent.src = "../images/" + storeCode + ".jpg";
+      // create a container div with a unique ID for each store
+      let storeContainer = document.createElement("div");
+      storeContainer.classList.add("container");
+      storeContainer.id = "store-" + ID;
 
-      //this line sets the id attribute for the <i> tag in the format of "save-storedID"
-      //so later we know which store to favorite based on which store was clicked
-      document.getElementById("bookmark").id = "save-" + ID;
+      // set the content for each store
+      let storeCard = cardTemplate.content.cloneNode(true);
+      
+      storeCard.querySelector("#storeName").innerHTML = storeName;
+      storeCard.querySelector("#storeLocation").innerHTML = storeLocation;
+      storeCard.querySelector(".store-img").src = "../images/" + storeCode + ".jpg";
+      storeCard.querySelector("#bookmark").id = "save-" + ID;
+      // storeCard.querySelector("#storeDetail").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ex vel felis molestie lobortis.";
+
+      storeContainer.appendChild(storeCard);
+      document.querySelector("#storeContainer").appendChild(storeContainer);
 
       firebase.auth().onAuthStateChanged((user) => {
         if (user) {
@@ -41,10 +47,10 @@ function displayStoreInfo() {
       });
       // this line will call a function to save the stores to the user's document
       document.getElementById("save-"+ID).onclick = () => toggleBookmark(ID);
-      
     });
 }
 displayStoreInfo();
+
 
 var currentUser;
 
