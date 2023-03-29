@@ -224,21 +224,39 @@ header {
   text-decoration: underline;
 }
 
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
 .btn {
   width: 100%;
   height: 50px;
   border: none;
   text-transform: uppercase;
   border-radius: 8px;
-  cursor: pointer;
   font-size: 1.5em;
-  color: #fff;
   font-weight: 500;
-  background-color: #162938;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5em 1.25em;
+  background: linear-gradient(90deg, #183cdf, #0a66a3, #183cdf);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 350ms;
 }
 
 .btn:hover {
   background-color: #145586;
+  background-position: right;
 }
 .login-register {
   font-size: 0.9em;
