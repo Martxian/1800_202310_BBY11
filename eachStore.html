@@ -42,19 +42,21 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- Store Container -->
-    <div class="container" id="favoriteCardTemplate">
-        <!-- <i class="material-icons">upload_file_border</i> -->
-        <i class="material-icons" id="bookmark">favorite_border</i>
-        <h1><span id="storeName">Store name</span></h1>
-        <div class="position-relative">
-            <img class="store-img responsive" src="" alt="Store photo">
-            <h6><span id="storeLocation">Location</span></h6>
-            <h6>Status: <span id="storeStatus">Status</span></h6>
-            <button class="btn btn-primary position-absolute bottom-0 end-0 m-3"
-                onclick="saveStoreDocumentIDAndRedirect()">Update Status</button>
+    <div class="container" id="storeContainer"></div>
+<template id="storeTemplate">
+        <div class="card">
+            <div class="card-body">
+                <i class="material-icons" id="bookmark">favorite_border</i>
+                <h5 class="card-title"><span id="storeName">Store name</span></h5>
+                <h6 class="card-subtitle mb-2 text-muted"><span id="storeLocation">Location</span></h6>
+                <img class="card-img-top store-img" src="" alt="Store photo">
+                <p class="card-text"><span id="storeDetail"></span></p>
+                <button class="btn btn-primary" onclick="saveStoreDocumentIDAndRedirect()">Update Status</button>
+            </div>
         </div>
-        <div><span id="storeDetail"></span></div>
-    </div>
+    
+</template>
+
 
     <div class="container">
         <h2>Reviews:</h2>
