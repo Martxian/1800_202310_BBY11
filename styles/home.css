@@ -3,13 +3,14 @@
     color: #C6D8FF; 
     border-color: #C6D8FF;
     font-weight: 700;
+    padding: 10px;
+margin-bottom: 100px
   }
   
   .btn:hover{
     background-color: white;
     color: #1F2232; 
     border-color: #1F2232; 
-    
   }
 
 .custom-bg{
