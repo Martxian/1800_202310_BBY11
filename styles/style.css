@@ -1,4 +1,4 @@
-text_color {
+/* text_color {
   color: var(--bs-indigo);
 }
 
@@ -18,7 +18,151 @@ text_color {
 .custom-bg{
     background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
     color: #1F2232;
-  }
+  } */
 
 /* make a text center */
 /* add div class 'text-center' */
+
+/* index.html */
+.Logo {
+    padding: 2rem;
+    color: red;
+    text-align: center;
+    height: 300px;
+}
+
+.btn {
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #1f2232;
+    border-color: #1f2232;
+    background-position: right;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+    background-position: right;
+}
+
+.custom-bg {
+    background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+}
+
+/* login.html */
+.firebaseui-container {
+    background-color: aliceblue;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: rgba(16, 218, 154, 0.87);
+    direction: ltr;
+    font: 16px Roboto, arial, sans-serif;
+    margin: 20px auto;
+    max-width: 360px;
+    /** This is needed for the invisible reCAPTCHA badge to show. */
+    overflow: visible;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+/* home.html */
+.btn {
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #1f2232;
+    border-color: #1f2232;
+    background-position: right;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+    background-position: right;
+}
+
+.custom-bg {
+    background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
+    color: #1f2232;
+}
+
+.tomorrow {
+    display: flex;
+    position: bottom;
+    padding: 0px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+/* map.html */
+.custom-button {
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+}
+
+.custom-button:hover {
+    background-color: white;
+    color: #1f2232;
+    border-color: #1f2232;
+    background-position: right;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+    background-position: right;
+}
+
+.mapboxgl-popup-content {
+    background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+    font-size: 15px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.mapboxgl-popup-content strong {
+    font-size: 20px;
+}
+
+.mapboxgl-popup-content p {
+    margin: 10px 0;
+}
+
+/* eachStore.html */

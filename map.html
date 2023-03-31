@@ -26,14 +26,14 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css">
 
     <!-- Other libraries go here -->
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
-
-    <!-- Other libraries go here -->
-    <link rel="stylesheet" href="./styles/map.css" />
+    <link rel="stylesheet" href="./styles/style.css">
 
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Mapbox libraries -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
 </head>
 
 <body>
@@ -42,23 +42,13 @@
     <!------------------------------>
 
     <!-- Navbar -->
-    <nav id="navbarPlaceholder" style="height: 10vh"></nav>
+    <nav id="navbarPlaceholder"></nav>
 
     <!-- Content goes here -->
     <!-- Main Body -->
     <main>
-        <!-- MAPBOX -->
-        <!-- <h2>Map View Holder</h2> -->
-        <div id='map' style='height: 90vh;'></div>
-        <!-- MAPBOX -->
-        <div>
-            <!-- <div class="card">
-            </div> -->
-            <!-- <div class="card-body">
-                <h5 class="card-title">Map</h5>
-                <p class="card-text">Welcome to the map.</p>
-            </div> -->
-        </div>
+        <!-- Mapbox -->
+        <div id='map' style='height: 92vh;'></div>
     </main>
 
     <!-- Footer -->

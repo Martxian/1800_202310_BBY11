@@ -23,16 +23,16 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css">
 
     <!-- Other libraries go here -->
-    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/style.css">
 
     <!-- Google Icons (Material Design)-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="custom-bg">
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
@@ -41,58 +41,45 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- Hero -->
-    <div class="p-5 mb-4 custom-bg rounded-3 text-center">
+    <div class="p-5 mb-4 rounded-3 text-center vh-100">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">Welcome to GroSurrey Check, <span id="name-goes-here"></span></h1>
             <hr />
             <p class="col-md-8 fs-4">Do you need to shop?</p>
         </div>
-        
-        <!-- Login button -->
-        <button onclick="window.location.href='map.html'" class="btn btn-primary btn-lg" type="button">Search your store!</button>
 
-        <!-- <button onclick="window.location.href='login1.html'" class="btn btn-primary btn-lg" type="button">Login /
-            Signup</button> -->
-            <script>
-                (function(d, s, id) {
-                    if (d.getElementById(id)) {
-                        if (window.__TOMORROW__) {
-                            window.__TOMORROW__.renderWidget();
-                        }
-                        return;
+        <!-- Search store button -->
+        <button onclick="window.location.href='map.html'" class="btn btn-primary btn-lg" type="button">Search your
+            store!</button>
+
+        <!-- Weather display -->
+        <script>
+            (function (d, s, id) {
+                if (d.getElementById(id)) {
+                    if (window.__TOMORROW__) {
+                        window.__TOMORROW__.renderWidget();
                     }
-                    const fjs = d.getElementsByTagName(s)[0];
-                    const js = d.createElement(s);
-                    js.id = id;
-                    js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
-        
-                    fjs.parentNode.insertBefore(js, fjs);
-                })(document, 'script', 'tomorrow-sdk');
-                </script>
-        
-                <div class="tomorrow"
-                   data-location-id="017145"
-                   data-language="EN"
-                   data-unit-system="METRIC"
-                   data-skin="dark"
-                   data-widget-type="upcoming"
-                   style="padding-bottom:22px;position:relative;"
-                >
-                  <a
-                    href="https://www.tomorrow.io/weather-api/"
-                    rel="nofollow noopener noreferrer"
-                    target="_blank"
-                    style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
-                  >
-                    <img
-                      alt="Powered by the Tomorrow.io Weather API"
-                      src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
-                      width="1"
-                      height="1"
-                    />
-                  </a>
-                </div>
+                    return;
+                }
+                const fjs = d.getElementsByTagName(s)[0];
+                const js = d.createElement(s);
+                js.id = id;
+                js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+                fjs.parentNode.insertBefore(js, fjs);
+            })(document, 'script', 'tomorrow-sdk');
+        </script>
+
+        <div class="tomorrow" data-location-id="017145" data-language="EN" data-unit-system="METRIC" data-skin="dark"
+            data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
+            <a href="https://www.tomorrow.io/weather-api/" rel="nofollow noopener noreferrer" target="_blank"
+                style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
+                <img alt="Powered by the Tomorrow.io Weather API"
+                    src="https://weather-website-client.tomorrow.io/img/powered-by.svg" width="1" height="1" />
+            </a>
+        </div>
     </div>
+
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>
 

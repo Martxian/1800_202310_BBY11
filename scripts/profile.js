@@ -1,7 +1,7 @@
 // firebase user global variable 
 var currentUser
 
-//check if user is logged in
+// check if user is logged in
 firebase.auth().onAuthStateChanged(user => {
     // Check if a user is signed in:
     if (user) {
@@ -13,12 +13,12 @@ firebase.auth().onAuthStateChanged(user => {
     }
 });
 
-//Edit user settings by allowing form to be fillable
+// Edit user settings by allowing form to be fillable
 function editUserSettings() {
     document.getElementById('personalInfoFields').disabled = false;
 }
 
-//Save user info and write to firestore database to save new username
+// Save user info and write to firestore database to save new username
 function saveUserInfo() {
     firstName = document.getElementById("firstname").value
     lastName = document.getElementById("lastname").value
@@ -32,7 +32,7 @@ function saveUserInfo() {
         })
 }
 
-//Populate the settings page by reading from firestore database, specifically the user's name on the settings page
+// Populate the settings page by reading from firestore database, specifically the user's name on the settings page
 function populateSettings() {
     currentUser
         .onSnapshot(userDoc => {
@@ -52,12 +52,12 @@ function populateSettings() {
         })
 }
 
-//On click function to show the modal insettings page 
+// On click function to show the modal insettings page 
 function myFunction() {
     $('#exampleModal').modal('show')
 }
 
-//On click function to hide modal in settings page
+// On click function to hide modal in settings page
 function closeModal() {
     $('#exampleModal').modal('hide')
 }
