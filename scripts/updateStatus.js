@@ -16,7 +16,7 @@ function getStoreName(id) {
 //Run function getStatus
 getStoreName(storeDocID);
 
-//updateStatus function
+// updateStatus function
 function updateStatus() {
     console.log("inside update status")
     let Status = document.querySelector('input[name="status"]:checked').value;
@@ -24,27 +24,6 @@ function updateStatus() {
     console.log(Status, Reason);
 
     firebase.auth().onAuthStateChanged(user => {
-        // if (user) {
-        //     var currentUser = db.collection("users").doc(user.uid)
-        //     var userID = user.uid;
-        //     //get the document for current user.
-        //     currentUser.get()
-        //         .then(userDoc => {
-        //             var userEmail = userDoc.data().email;
-        //             db.collection("status").add({
-        //                 storeDocID: storeDocID,
-        //                 userID: userID,
-        //                 status: Status,
-        //                 reason: reason,
-        //                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        //             }).then(() => {
-        //                 window.location.href = "thanks.html"; //new line added
-        //             })
-        //         })
-        // } else {
-        //     console.log("No user is signed in");
-        //     window.location.href = 'updateStatus.html';
-        // }
         if (user) {
             db.collection("stores")
                 .doc(storeDocID)

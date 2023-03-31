@@ -1,6 +1,7 @@
 // firebase user global variable
 let currentUser;
 
+<<<<<<< HEAD
 //check if user is logged in
 firebase.auth().onAuthStateChanged((user) => {
   // Check if a user is signed in:
@@ -11,14 +12,26 @@ firebase.auth().onAuthStateChanged((user) => {
     console.log("No user is signed in!");
     window.location.href = "login.html";
   }
+=======
+// check if user is logged in
+firebase.auth().onAuthStateChanged(user => {
+    // Check if a user is signed in:
+    if (user) {
+        currentUser = db.collection("users").doc(user.uid);
+        populateSettings()
+    } else {
+        console.log("No user is signed in!");
+        window.location.href = "login.html";
+    }
+>>>>>>> 1bd1d20a0862818775b395f145e4db5eff5fa3cb
 });
 
-//Edit user settings by allowing form to be fillable
+// Edit user settings by allowing form to be fillable
 function editUserSettings() {
   document.getElementById("personalInfoFields").disabled = false;
 }
 
-//Save user info and write to firestore database to save new username
+// Save user info and write to firestore database to save new username
 function saveUserInfo() {
   firebase.auth().onAuthStateChanged(function (user) {
     const storageRef = storage.ref("images/" + user.uid + ".jpg");
@@ -52,12 +65,21 @@ function saveUserInfo() {
   });
 }
 
+<<<<<<< HEAD
 // //Populate the settings page by reading from firestore database, specifically the user's name on the settings page
 // function populateSettings() {
 //   currentUser.onSnapshot((userDoc) => {
 //     var firstName = userDoc.data().name.split(" ")[0];
 //     var lastName = userDoc.data().name.split(" ")[1];
 //     var address = userDoc.data().address;
+=======
+// Populate the settings page by reading from firestore database, specifically the user's name on the settings page
+function populateSettings() {
+    currentUser
+        .onSnapshot(userDoc => {
+            var firstName = userDoc.data().name.split(' ')[0]
+            var lastName = userDoc.data().name.split(' ')[1]
+>>>>>>> 1bd1d20a0862818775b395f145e4db5eff5fa3cb
 
 //     //If not text input, then keep the previous name from firestore
 //     if (firstName != null) {
@@ -74,12 +96,22 @@ function saveUserInfo() {
 //   });
 // }
 
+<<<<<<< HEAD
 //On click function to show the modal insettings page
+=======
+                $(".name-goes-here").text(userDoc.data().name);
+                // $(".email-goes-here").text(user_Email);
+            }
+        })
+}
+
+// On click function to show the modal insettings page 
+>>>>>>> 1bd1d20a0862818775b395f145e4db5eff5fa3cb
 function myFunction() {
   $("#exampleModal").modal("show");
 }
 
-//On click function to hide modal in settings page
+// On click function to hide modal in settings page
 function closeModal() {
   $("#exampleModal").modal("hide");
 }

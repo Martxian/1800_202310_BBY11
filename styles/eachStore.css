@@ -1,27 +1,36 @@
-.btn-primary{
-    background-color: #1f2232;
-        color: #c6d8ff;
-        border-color: #c6d8ff;
-        font-weight: 700;
-    
-    font-size: small;
-    display: inline;
+.btn-primary {
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
     float: right;
     margin: 3px;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: white;
     color: #1f2232;
     border-color: #1f2232;
+    background-position: right;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+    background-position: right;
 }
 
-.material-icons{
+.material-icons {
     width: 30px;
     font-size: 30px;
     display: flex;
     float: right;
     cursor: pointer;
-    }
-
-
+}
