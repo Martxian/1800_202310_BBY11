@@ -1,13 +1,13 @@
-//----------------------------------------
+ //----------------------------------------
 //  Your web app's Firebase configuration
 //----------------------------------------
 var firebaseConfig = {
-  apiKey: "AIzaSyBRgo2lCL6OMM5V4YL6nsL3b9AU7ANhtxU",
-  authDomain: "comp1800-bby11.firebaseapp.com",
-  projectId: "comp1800-bby11",
-  storageBucket: "comp1800-bby11.appspot.com",
-  messagingSenderId: "60452613019",
-  appId: "1:60452613019:web:174ded5ea27bad6c368f3e",
+    apiKey: "AIzaSyBRgo2lCL6OMM5V4YL6nsL3b9AU7ANhtxU",
+    authDomain: "comp1800-bby11.firebaseapp.com",
+    projectId: "comp1800-bby11",
+    storageBucket: "comp1800-bby11.appspot.com",
+    messagingSenderId: "60452613019",
+    appId: "1:60452613019:web:174ded5ea27bad6c368f3e"
 };
 
 //--------------------------------------------
@@ -16,41 +16,41 @@ var firebaseConfig = {
 //--------------------------------------------
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+  //signup function
+  function signUp(){
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
 
-// let's code
-var datab = firebase.database().ref("data");
-function UserRegister() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then(function () {})
-    .catch(function (error) {
-      var errorcode = error.code;
-      var errormsg = error.message;
-    });
-}
-const auth = firebase.auth();
-function SignIn() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  const promise = auth.signInWithEmailAndPassword(email, password);
-  promise.catch((e) => alert(e.msg));
-  window.open("https://www.google.com", "_self");
-}
-document.getElementById("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  var userInfo = datab.push();
-  userInfo.set({
-    name: getId("name"),
-    email: getId("email"),
-    password: getId("password"),
-  });
-  alert("Successfully Signed Up");
-  console.log("sent");
-  document.getElementById("form").reset();
-});
-function getId(id) {
-  return document.getElementById(id).value;
-}
+    const promise = auth.createUserWithEmailAndPassword(email.value,password.value);
+    //
+    promise.catch(e=>alert(e.message));
+    alert("SignUp Successfully");
+  }
+
+  //signIN function
+  function  signIn(){
+    var email = document.getElementById("email");
+    var password  = document.getElementById("password");
+    const promise = auth.signInWithEmailAndPassword(email.value,password.value);
+    promise.catch(e=>alert(e.message));
+    
+  }
+
+
+  //signOut
+
+  function signOut(){
+    auth.signOut();
+    alert("SignOut Successfully from System");
+  }
+
+  //active user to homepage
+  firebase.auth().onAuthStateChanged((user)=>{
+    if(user){
+      var email = user.email;
+      alert("Active user "+email);
+
+    }else{
+      alert("No Active user Found")
+    }
+  })
