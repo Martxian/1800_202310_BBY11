@@ -1,11 +1,14 @@
-// Current Weather API Endpoint
+(function (d, s, id) {
+    if (d.getElementById(id)) {
+        if (window.__TOMORROW__) {
+            window.__TOMORROW__.renderWidget();
+        }
+        return;
+    }
+    const fjs = d.getElementsByTagName(s)[0];
+    const js = d.createElement(s);
+    js.id = id;
+    js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
 
-http://api.weatherstack.com/current
-    ? access_key = 115ae663acb91c7d645b770b736a5a42
-    & query = Surrey
-
-        // optional parameters: 
-
-        & units = m
-            & language = en
-                & callback = MY_CALLBACK
+    fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "tomorrow-sdk");
