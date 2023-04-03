@@ -1,82 +1,112 @@
 .form-field {
-    width: 90%;
-    background-color: #edf6ffbb;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 15px;
+  width: 90%;
+  background-color: #edf6ffbb;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 15px;
 }
 
 h1 {
-    text-align: center;
-    font-size: clamp(20px, 6vw, 50px);
-    color: rgba(16, 218, 154, 0.87);
+  text-align: center;
+  font-size: clamp(20px, 6vw, 50px);
+  color: rgba(16, 218, 154, 0.87);
 }
 
 label {
-    width: 100%;
-    text-align: left;
-    color: rgba(16, 218, 154, 0.87);
+  width: 100%;
+  text-align: left;
+  color: rgba(16, 218, 154, 0.87);
 }
 
 .button {
-    grid-area: button;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  grid-area: button;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 #edit-button {
-    width: 100%;
-    background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
-    color: #edf6ff;
-    border: 1px;
-    border-radius: 5px;
-    padding: 0.5em;
+  width: 50%;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5em 1.25em;
+  background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 350ms;
+  border-radius: 5px;
 }
 
 #edit-button:hover {
-    background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
-    color: white;
+  background-color: white;
+  color: #1f2232;
+  border-color: #1f2232;
+  background-position: right;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5em 1.25em;
+  background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 350ms;
+  background-position: right;
 }
 
 #edit-button:active {
-    background-color: #b9732f;
-    color: #ffffff;
+  background-color: #b9732f;
+  color: #ffffff;
 }
 
 #save-button {
-    width: 100%;
-    background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
-    color: #edf6ff;
-    border: 1px;
-    border-radius: 5px;
-    padding: 0.5em;
+  width: 50%;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5em 1.25em;
+  background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 350ms;
+  border-radius: 5px;
 }
 
 #save-button:hover {
-    background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
-    color: white;
+  background-color: white;
+  color: #1f2232;
+  border-color: #1f2232;
+  background-position: right;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5em 1.25em;
+  background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 350ms;
+  background-position: right;
 }
 
 #save-button:active {
-    background-color: #b9732f;
-    color: #ffffff;
+  background-color: #b9732f;
+  color: #ffffff;
 }
 
 #profile-container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #mypic-goes-here {
-    width: 100px;
-    background-size: cover;
-    position: center;
+  width: 100px;
+  background-size: cover;
+  position: center;
 }
