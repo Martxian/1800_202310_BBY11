@@ -1,70 +1,69 @@
-
 .form-field {
     width: 90%;
     background-color: #edf6ffbb;
     padding: 1em;
     margin: 1em;
     border-radius: 15px;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     font-size: clamp(20px, 6vw, 50px);
     color: rgba(16, 218, 154, 0.87);
-  }
-  
-  label {
+}
+
+label {
     width: 100%;
     text-align: left;
     color: rgba(16, 218, 154, 0.87);
-  }
-  
-  .button {
+}
+
+.button {
     grid-area: button;
     display: flex;
     align-items: center;
     justify-content: space-around;
-  }
-  
-  #edit-button {
+}
+
+#edit-button {
     width: 100%;
     background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
     color: #edf6ff;
     border: 1px;
     border-radius: 5px;
     padding: 0.5em;
-  }
-  
-  #edit-button:hover {
+}
+
+#edit-button:hover {
     background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
     color: white;
-  }
-  
-  #edit-button:active {
+}
+
+#edit-button:active {
     background-color: #b9732f;
     color: #ffffff;
-  }
-  
-  #save-button {
+}
+
+#save-button {
     width: 100%;
     background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
     color: #edf6ff;
     border: 1px;
     border-radius: 5px;
     padding: 0.5em;
-  }
-  
-  #save-button:hover {
+}
+
+#save-button:hover {
     background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
     color: white;
-  }
-  
-  #save-button:active {
+}
+
+#save-button:active {
     background-color: #b9732f;
     color: #ffffff;
-  }
-  
-  #profile-container {
+}
+
+#profile-container {
     margin-left: auto;
     margin-right: auto;
     width: 100px;
@@ -74,10 +73,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  #mypic-goes-here {
+}
+
+#mypic-goes-here {
     width: 100px;
     background-size: cover;
     position: center;
-  }
+}
