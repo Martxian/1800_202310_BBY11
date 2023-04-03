@@ -19,8 +19,8 @@ h1 {
     background-size: 300%;
     background-position: left;
     transition: background-position 350ms;
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
+     margin-top: 20px;
+    
 }
 
 .btn:hover {
@@ -79,7 +79,7 @@ h1 {
     display: flex;
     position: sticky;
     padding: 0px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .title-word {
