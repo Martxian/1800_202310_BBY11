@@ -81,6 +81,10 @@
 }
 
 /* home.html */
+.container1{
+    text-align: center;
+  
+}
 .btn {
     color: white;
     border: 0;
@@ -90,6 +94,9 @@
     background-size: 300%;
     background-position: left;
     transition: background-position 350ms;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
 }
 
 .btn:hover {
@@ -115,10 +122,9 @@
 
 .tomorrow {
     display: flex;
-    position: bottom;
+    position: sticky;
     padding: 0px;
-    margin-top: 30px;
-    text-align: center;
+    margin-top:50px;
 }
 
 
