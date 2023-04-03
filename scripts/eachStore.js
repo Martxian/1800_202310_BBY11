@@ -26,6 +26,7 @@ function displayStoreInfo() {
 
             storeCard.querySelector("#storeName").innerHTML = storeName;
             storeCard.querySelector("#storeLocation").innerHTML = storeLocation;
+            storeCard.querySelector("#storeStatus").innerHTML = storeStatus;
             storeCard.querySelector(".store-img").src = "../images/" + storeCode + ".jpg";
             storeCard.querySelector("#bookmark").id = "save-" + ID;
             // storeCard.querySelector("#storeDetail").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ex vel felis molestie lobortis.";
