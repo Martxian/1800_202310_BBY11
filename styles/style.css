@@ -1,32 +1,37 @@
 /* General CSS */
+h1 {
+    text-align: center;
+    font-size: clamp(20px, 6vw, 50px);
+    color: rgba(16, 218, 154, 0.87);
+}
 
 .btn {
-  color: white;
-  border: 0;
-  cursor: pointer;
-  padding: 0.5em 1.25em;
-  background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
-  background-size: 300%;
-  background-position: left;
-  transition: background-position 350ms;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
 }
 
 .btn:hover {
-  background-color: white;
-  color: #1f2232;
-  border-color: #1f2232;
-  background-position: right;
-  color: white;
-  border: 0;
-  cursor: pointer;
-  padding: 0.5em 1.25em;
-  background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
-  background-size: 300%;
-  background-position: left;
-  transition: background-position 350ms;
-  background-position: right;
+    background-color: white;
+    color: #1f2232;
+    border-color: #1f2232;
+    background-position: right;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+    background-position: right;
 }
 
 .custom-bg {
@@ -48,72 +53,125 @@
 
 /* login.html */
 .firebaseui-container {
-  background-color: aliceblue;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  color: rgba(16, 218, 154, 0.87);
-  direction: ltr;
-  font: 16px Roboto, arial, sans-serif;
-  margin: 20px auto;
-  max-width: 360px;
-  /** This is needed for the invisible reCAPTCHA badge to show. */
-  overflow: visible;
-  position: relative;
-  text-align: left;
-  width: 100%;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: rgba(16, 218, 154, 0.87);
+    direction: ltr;
+    font: 16px Roboto, arial, sans-serif;
+    margin: 20px auto;
+    max-width: 360px;
+    /** This is needed for the invisible reCAPTCHA badge to show. */
+    overflow: visible;
+    position: relative;
+    text-align: left;
+    width: 100%;
 }
 
 /* home.html */
-
 .tomorrow {
-  display: flex;
-  position: sticky;
-  padding: 0px;
-  margin-top: 50px;
+    display: flex;
+    position: sticky;
+    padding: 0px;
+    margin-top: 50px;
+}
+
+.title-word {
+    animation: color-animation 7s linear infinite;
+    --color-1: #0a5bc5;
+    --color-2: #11916a;
+    --color-3: #15a3a8;
+}
+
+@keyframes color-animation {
+    0% {
+        color: var(--color-1);
+    }
+
+    20% {
+        color: var(--color-1);
+    }
+
+    40% {
+        color: var(--color-2);
+    }
+
+    60% {
+        color: var(--color-2);
+    }
+
+    70% {
+        color: var(--color-3);
+    }
+
+    80% {
+        color: var(--color-3);
+    }
+
+    100% {
+        color: var(--color-1);
+    }
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.container {
+    place-items: center;
+    text-align: center;
+    padding: 0px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    font-weight: 600;
+    font-size: 7vh;
+    text-transform: uppercase;
 }
 
 /* map.html */
 .custom-button {
-  color: white;
-  border: 0;
-  cursor: pointer;
-  padding: 0.5em 1.25em;
-  background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
-  background-size: 300%;
-  background-position: left;
-  transition: background-position 350ms;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
 }
 
 .custom-button:hover {
-  background-color: white;
-  color: #1f2232;
-  border-color: #1f2232;
-  background-position: right;
-  color: white;
-  border: 0;
-  cursor: pointer;
-  padding: 0.5em 1.25em;
-  background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
-  background-size: 300%;
-  background-position: left;
-  transition: background-position 350ms;
-  background-position: right;
+    background-color: white;
+    color: #1f2232;
+    border-color: #1f2232;
+    background-position: right;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+    background-position: right;
 }
 
 .mapboxgl-popup-content {
-  background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
-  font-size: 15px;
-  text-align: center;
-  border: 2px solid white;
+    background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+    font-size: 15px;
+    text-align: center;
+    border: 2px solid white;
 }
 
 .mapboxgl-popup-content strong {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .mapboxgl-popup-content p {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 /* eachStore.html */
@@ -156,12 +214,70 @@
 
 /* aboutUs.html */
 .member-pics {
-  max-width: 250px;
-  max-height: 250px;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 /* favorite.html */
-.btn {
+.card {
+    margin: 5px;
+}
+
+.card-title {
+    margin: 10px;
+}
+
+/* .container h1 {
+    font-size: large;
+    font-weight: 900;
+} */
+
+.card-status {
+    color: #355834;
+    font-weight: 900;
+    font-size: large;
+}
+
+.card-reason {
+    color: cyan;
+    font-weight: 900;
+}
+
+.container span {
+    color: #355834;
+    font-weight: 1000;
+}
+
+/* profile.html */
+.form-field {
+    width: 90%;
+    background-color: #edf6ffbb;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+#profile-title {
+    text-align: center;
+    font-size: clamp(20px, 6vw, 50px);
+    color: rgba(16, 218, 154, 0.87);
+}
+
+label {
+    width: 100%;
+    text-align: left;
+    color: rgba(16, 218, 154, 0.87);
+}
+
+.button {
+    grid-area: button;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#edit-button {
+    width: 50%;
     color: white;
     border: 0;
     cursor: pointer;
@@ -170,9 +286,10 @@
     background-size: 300%;
     background-position: left;
     transition: background-position 350ms;
+    border-radius: 5px;
 }
 
-.btn:hover {
+#edit-button:hover {
     background-color: white;
     color: #1f2232;
     border-color: #1f2232;
@@ -188,36 +305,62 @@
     background-position: right;
 }
 
-.custom-bg {
+#edit-button:active {
+    background-color: #b9732f;
+    color: #ffffff;
+}
+
+#save-button {
+    width: 50%;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #52b0ee, rgb(16, 206, 165), #07af5b);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+    border-radius: 5px;
+}
+
+#save-button:hover {
     background-color: white;
-    /* background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%); */
+    color: #1f2232;
+    border-color: #1f2232;
+    background-position: right;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    background: linear-gradient(90deg, #098ab1, rgb(13, 184, 118), #177ea7);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 350ms;
+    background-position: right;
 }
 
-.card {
-    margin: 5px;
+#save-button:active {
+    background-color: #b9732f;
+    color: #ffffff;
 }
 
-.card-title {
-    margin: 10px;
+#profile-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: solid 2px #177ea7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container h1 {
-    font-size: large;
-    font-weight: 900;
-}
-
-.card-status {
-    color: #355834;
-    font-weight: 900;
-    font-size: large;
-}
-
-.card-reason {
-    color: #8ae9b3;
-    font-weight: 900;
-}
-
-.container span {
-    color: #355834;
-    font-weight: 1000;
+#mypic-goes-here {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
