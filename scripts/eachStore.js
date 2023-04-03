@@ -88,7 +88,18 @@ function saveStoreDocumentIDAndRedirect() {
     let params = new URL(window.location.href) //get the url from the search bar
     let ID = params.searchParams.get("id");
     localStorage.setItem('storeDocID', ID);
-    window.location.href = 'updateStatus.html';
+
+    // Check if a user is logged in
+    if (!firebase.auth().currentUser) {
+        console.log("No user is signed in");
+        // Display a popup asking the user to login
+        alert('Please log in to continue');
+        // Redirect the user to the login page
+        window.location.href = 'login.html';
+    } else {
+        // If a user is logged in, redirect to the updateStatus page
+        window.location.href = 'updateStatus.html';
+    }
 }
 
 // function populateStatus() {
@@ -103,7 +114,7 @@ function saveStoreDocumentIDAndRedirect() {
 //             status = allStatus.docs;
 //             console.log(status.status);
 //             status.forEach(doc => {
-//                 var user = doc.data().userID; //gets the user 
+//                 var user = doc.data().userID; //gets the user
 //                 var status = doc.data().status; //gets the unique ID field
 //                 var time = doc.data().timestamp.toDate();
 //                 var reason = doc.data().reason;
