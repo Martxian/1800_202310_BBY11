@@ -1,21 +1,20 @@
 # Project Title
 
 ## 1. Project Description
-State your app in a nutshell, or one-sentence pitch. Give some elaboration on what the core features are.  
-This browser based web application to ... 
+Our application notifies users about the status of certain grocery stores specifically located in Surrey, as well as the current weather and extreme conditions.
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
 * Hi my name is MunyoungCho. 
 * Hello my name is Kenneth and i am so excited to finish this program!
-* Hi my name is Marvin Sio. I can't wait to start this project because I want to make a useful app about the weather.
+* Hi my name is Marvin Sio.
 	
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
 * HTML, CSS, JavaScript
 * Bootstrap 5.0 (Frontend library)
 * Firebase 8.0 (BAAS - Backend as a Service)
-* ...
+* MapBox API
 
 ## 4. Complete setup/installion/usage
 State what a user needs to do when they come to your project.  How do others start using your code or application?
@@ -32,7 +31,7 @@ Here are some known bugs:
 
 ## 6. Features for Future
 What we'd like to build in the future:
-* ...
+* Let the icons on the map change color based on status.
 * ...
 * ...
 	
@@ -54,8 +53,5 @@ It has the following subfolders and files:
 ├── styles                   # Folder for styles
     /blah.css                # 
 
-
-
-```
 
 
