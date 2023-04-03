@@ -166,3 +166,9 @@
 }
 
 /* eachStore.html */
+
+/* aboutUs.html */
+.member-pics {
+    max-width: 250px;
+    max-height: 250px;
+}
