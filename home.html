@@ -41,7 +41,7 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- Hero -->
-    <div class="p-5 mb-4 rounded-3 text-center vh-100">
+    <div class="p-5 mb-4 rounded-3 text-center">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">Welcome to GroSurrey Check, <span id="name-goes-here"></span></h1>
             <hr />
@@ -53,23 +53,6 @@
             store!</button>
 
         <!-- Weather display -->
-        <script>
-            (function (d, s, id) {
-                if (d.getElementById(id)) {
-                    if (window.__TOMORROW__) {
-                        window.__TOMORROW__.renderWidget();
-                    }
-                    return;
-                }
-                const fjs = d.getElementsByTagName(s)[0];
-                const js = d.createElement(s);
-                js.id = id;
-                js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
-
-                fjs.parentNode.insertBefore(js, fjs);
-            })(document, 'script', 'tomorrow-sdk');
-        </script>
-
         <div class="tomorrow" data-location-id="017145" data-language="EN" data-unit-system="METRIC" data-skin="dark"
             data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
             <a href="https://www.tomorrow.io/weather-api/" rel="nofollow noopener noreferrer" target="_blank"
@@ -79,35 +62,7 @@
             </a>
         </div>
     </div>
-    <script>
-        (function (d, s, id) {
-            if (d.getElementById(id)) {
-                if (window.__TOMORROW__) {
-                    window.__TOMORROW__.renderWidget();
-                }
-                return;
-            }
-            const fjs = d.getElementsByTagName(s)[0];
-            const js = d.createElement(s);
-            js.id = id;
-            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
 
-            fjs.parentNode.insertBefore(js, fjs);
-        })(document, "script", "tomorrow-sdk");
-    </script>
-
-    <div class="tomorrow" data-location-id="017089,016253,016597,016885,017145,016146" data-language="EN"
-        data-unit-system="METRIC" data-skin="dark" data-widget-type="fire" style="padding: 50px; position: relative">
-        <a href="https://www.tomorrow.io/weather-api/" rel="nofollow noopener noreferrer" target="_blank" style="
-          position: relative;
-          bottom: 0;
-          transform: translateX(-50%);
-          left: 50%;
-        ">
-            <img alt="Powered by the Tomorrow.io Weather API"
-                src="https://weather-website-client.tomorrow.io/img/powered-by.svg" width="1" height="1" />
-        </a>
-    </div>
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>
 
@@ -120,6 +75,7 @@
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/home.js"></script>
+    <script src="./scripts/weather.js"></script>
 </body>
 
 </html>
