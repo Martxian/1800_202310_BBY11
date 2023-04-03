@@ -38,12 +38,10 @@ function showStoresOnMap() {
                         event_name = doc.data().name; // Status
                         preview = "<strong> <span style='color: green; font-weight: bold;'> Status: " + doc.data().status + "</strong><br/><br/>" + doc.data().location; // Text Preview
 
-
                         // Pushes information into the features array
                         features.push({
                             'type': 'Feature',
                             'properties': {
-                                // 'description': `<strong>${event_name}</strong><p>${preview}</p> <br> <button onclick="window.open('/eachStore.html?id=${doc.id}', '_blank')" title="Opens in a new window">Info</button>`
                                 'description': `<strong>${event_name}</strong><p>${preview}</p> <br> <button class="custom-button" onclick="window.open('/eachStore.html?id=${doc.id}', '_blank')" title="Opens in a new window">Check!</button>`
                             },
                             'geometry': {
@@ -101,7 +99,6 @@ function showStoresOnMap() {
                         map.getCanvas().style.cursor = '';
                     });
                 })
-
             });
     })
 }

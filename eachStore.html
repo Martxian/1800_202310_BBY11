@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Replace title with actual stores -->
-    <title>Individual Stores Pages</title>
+    <title>Stores</title>
     <meta name="comp1800 project" content="GroSurrey Check">
 
     <!-- Required meta tags -->
@@ -27,7 +26,7 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css">
 
     <!-- Other libraries go here -->
-    <link rel="stylesheet" href="./styles/eachStore.css" />
+    <link rel="stylesheet" href="./styles/style.css">
 
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -43,48 +42,44 @@
 
     <!-- Store Container -->
     <div class="container" id="storeContainer"></div>
-<template id="storeTemplate">
+    <template id="storeTemplate">
         <div class="card">
             <div class="card-body">
                 <i class="material-icons" id="bookmark">favorite_border</i>
                 <h5 class="card-title"><span id="storeName">Store name</span></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><span id="storeLocation">Location</span></h6>
+                <h6 class="card-subtitle mb-2 text-muted"><span id="storeStatus">Status</span></h6>
                 <img class="card-img-top store-img" src="" alt="Store photo">
                 <p class="card-text"><span id="storeDetail"></span></p>
-                <button class="btn btn-primary" onclick="saveStoreDocumentIDAndRedirect()">Update Status</button>
+                <button class="btn store-btn" onclick="saveStoreDocumentIDAndRedirect()">Update Status</button>
             </div>
         </div>
-    
-</template>
 
+    </template>
 
-    <div class="container">
-        <h2>Reviews:</h2>
+    <!-- Updates Container -->
+    <!-- <div class="container">
+        <h2>Updates:</h2>
         <div id="details-go-here"></div>
         <div class="container">
-            <div id="reviewCardGroup" class="row row-cols-auto">
+            <div id="statusCardGroup" class="row row-cols-auto">
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- <template id="reviewCardTemplate">
+    <!-- Status updates cards -->
+    <template id="statusCardTemplate">
         <div class="card bg-secondary">
             <img class="card-img-top">
             <div class="card-body bg-light">
-                <h5 class="title">placeholder</h5>
+                <h5 class="user">placeholder</h5>
                 <p class="time">placeholder</p>
-                <p class="level">placeholder</p>
-                <p class="season">placeholder</p>
-                <p class="scrambled">placeholder</p>
-                <p class="flooded">placeholder</p>
-                <br>
-                <p class="description">This card has supporting text below as a natural lead-in to additional content.
+                <p class="status">placeholder</p>
+                <p class="reason">placeholder</p>
                 </p>
             </div>
         </div>
     </template>
-
-
 
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>

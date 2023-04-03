@@ -1,63 +1,96 @@
-// firebase user global variable 
-var currentUser
+function populateUserInfo() {
+    firebase.auth().onAuthStateChanged((user) => {
+        // Check if user is signed in:
+        if (user) {
+            //go to the correct user document by referencing to the user uid
+            currentUser = db.collection("users").doc(user.uid);
+            //get the document for current user.
+            currentUser.get().then((userDoc) => {
+                //get the data fields of the user
+                var email = userDoc.data().email;
+                var userName = userDoc.data().name;
+                var displayAddress = userDoc.data().addess;
+                var userAboutMe = userDoc.data().aboutme;
+                let picUrl = userDoc.data().profilePic;
 
-//check if user is logged in
-firebase.auth().onAuthStateChanged(user => {
-    // Check if a user is signed in:
-    if (user) {
-        currentUser = db.collection("users").doc(user.uid);
-        populateSettings()
-    } else {
-        console.log("No user is signed in!");
-        window.location.href = "login.html";
-    }
+        //if the data fields are not empty, then write them in to the form.
+                if (email != null) {
+                    document.getElementById("emailInput").value = email;
+                }
+                if (userName != null) {
+                    document.getElementById("nameInput").value = userName;
+                }
+                if (displayAddress != null) {
+                    document.getElementById("displayAddress").value = displayAddress;
+                }
+                if (userAboutMe != null) {
+                    document.getElementById("aboutMeInput").value = userAboutMe;
+                }
+                if (picUrl != null) {
+                    $("#mypic-goes-here").attr("src", picUrl);
+                } else $("#mypic-goes-here").attr("src", "../images/default.jpg");
+            });
+        } else {
+            // No user is signed in.
+            console.log("No user is signed in");
+            alert("Please Sign-in to view your Profile.");
+        }
+    });
+}
+//call the function to run it
+populateUserInfo();
+
+const editButton = document.getElementById("edit-button");
+editButton.addEventListener("click", function editUserInfo() {
+    //Enable the form fields
+    document.getElementById("personalInfoFields").disabled = false;
 });
 
-//Edit user settings by allowing form to be fillable
-function editUserSettings() {
-    document.getElementById('personalInfoFields').disabled = false;
-}
+var ImageFile; //global variable to store the File Object reference
 
-//Save user info and write to firestore database to save new username
+function chooseFileListener() {
+    const fileInput = document.getElementById("mypic-input"); // pointer #1
+    const image = document.getElementById("mypic-goes-here"); // pointer #2
+
+    //when this file changes, do something
+    fileInput.addEventListener("change", function (e) {
+        //the change event returns a file "e.target.files[0]"
+        ImageFile = e.target.files[0];
+        var blob = URL.createObjectURL(ImageFile);
+
+        image.src = blob; //assign the "src" property of the "img" tag
+    });
+}
+chooseFileListener();
+
 function saveUserInfo() {
-    firstName = document.getElementById("firstname").value
-    lastName = document.getElementById("lastname").value
+    firebase.auth().onAuthStateChanged(function (user) {
+        var storage = firebase.storage();
+        var storageRef = storage.ref("images/" + user.uid + ".jpg");
 
-    currentUser.update({
-        name: `${firstName} ${lastName}`,
-    })
-        .then(() => {
-            console.log("Document successfully updated.")
-            document.getElementById('personalInfoFields').disabled = true;
-        })
-}
-
-//Populate the settings page by reading from firestore database, specifically the user's name on the settings page
-function populateSettings() {
-    currentUser
-        .onSnapshot(userDoc => {
-            var firstName = userDoc.data().name.split(' ')[0]
-            var lastName = userDoc.data().name.split(' ')[1]
-
-            //If not text input, then keep the previous name from firestore
-            if (firstName != null) {
-                document.getElementById("firstname").value = firstName;
-            }
-            if (lastName != null) {
-                document.getElementById("lastname").value = lastName;
-
-                $(".name-goes-here").text(userDoc.data().name);
-                // $(".email-goes-here").text(user_Email);
-            }
-        })
-}
-
-//On click function to show the modal insettings page 
-function myFunction() {
-    $('#exampleModal').modal('show')
-}
-
-//On click function to hide modal in settings page
-function closeModal() {
-    $('#exampleModal').modal('hide')
+        //Asynch call to put File Object (global variable ImageFile) onto Cloud
+        storageRef.put(ImageFile).then(function () {
+            //Asynch call to get URL from Cloud
+            storageRef.getDownloadURL().then(function (url) {
+                userName = document.getElementById("nameInput").value;
+                displayAddress = document.getElementById("displayAddress").value;
+                userAboutMe = document.getElementById("aboutMeInput").value;
+                //Asynch call to save the form fields into Firestore.
+                db.collection("users")
+                    .doc(user.uid)
+                    .update({
+                        name: userName,
+                        displayAddress: displayAddress,
+                        aboutme: userAboutMe,
+                        profilePic: url, // Save the URL into users collection
+                    })
+                    .then(function () {
+                        console.log("Saved user profile info");
+                        alert("Your Profile has been updated!");
+                    });
+                document.getElementById("personalInfoFields").disabled = true;
+                document.getElementById("mypic-input").value = "";
+            });
+        });
+    });
 }
