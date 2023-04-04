@@ -75,6 +75,10 @@ function toggleBookmark(ID) {
                 var icon = document.getElementById(iconID);
                 if (icon.innerText === "favorite") {
                     icon.innerText = "favorite_border";
+                    // remove the store from the favorites array
+                    currentUser.update({
+                        favorites: firebase.firestore.FieldValue.arrayRemove(ID)
+                    });
                 } else {
                     icon.innerText = "favorite";
                 }
