@@ -1,12 +1,4 @@
 /* General CSS */
-@font-face {
-  font-family: myFont;
-  src: url(/fonts/VollkornSC-SemiBold.ttf);
-}
-@font-face {
-  font-family: Font;
-  src: url(/fonts/Volkhov-Regular.ttf);
-}
 
 @font-face {
   font-family: BtnFont;
@@ -18,6 +10,10 @@
   src: url(/fonts/DMSans-Bold.ttf);
 }
 
+body, html{
+  font-family: font2;
+
+}
 h1 {
   text-align: center;
   font-size: clamp(20px, 6vw, 50px);
@@ -101,7 +97,7 @@ h1 {
 }
 
 .title-word {
-  font-family: myFont;
+  font-family: font2;
   animation: color-animation 7s linear infinite;
   --color-1: #0a5bc5;
   --color-2: #11916a;
@@ -193,13 +189,11 @@ h1 {
 }
 
 .mapboxgl-popup-content strong {
-  font-family: font;
   font-size: 10px;
   font-size: 1.5em;
 }
 
 .mapboxgl-popup-content p {
-  font-family: font;
   margin: 15px;
 }
 
@@ -249,36 +243,40 @@ h1 {
 }
 
 /* favorite.html */
+
+.title-fav{
+  text-transform: uppercase;
+  padding: 2px;
+  color: #0a5bc5;
+}
+
 .card {
   margin: 5px;
 }
 
 .card-title {
-  font-family: Font;
+  font-family: font2;
   margin: 10px;
-  animation: color-animation 7s linear infinite;
-  --color-1: #0a5bc5;
-  --color-2: #11916a;
-  --color-3: #15a3a8;
+  color: #0a5bc5;
 }
 
 .card-status {
   text-transform: uppercase;
-  font-family: myFont;
+  font-family: font2;
   color: #219e09;
   font-size: 5px;
   font-size: 2em;
 }
 
 .card-reason {
-  font-family: Font;
+  font-family: font2;
   color: rgba(12, 12, 14, 0.87);
   font-size: 10px;
   font-size: 2em;
 }
 
 .card-location {
-  font-family: Font;
+  font-family: Font2;
   color: rgba(12, 12, 14, 0.87);
   font-size: 16px;
 }
@@ -293,11 +291,10 @@ h1 {
 }
 
 #profile-title {
-  font-family: myFont;
-  animation: color-animation 7s linear infinite;
-  --color-1: #0a5bc5;
-  --color-2: #11916a;
-  --color-3: #15a3a8;
+  font-family: font2;
+  text-transform: uppercase;
+  margin: 10px;
+  color: #0a5bc5;
 }
 
 label {
