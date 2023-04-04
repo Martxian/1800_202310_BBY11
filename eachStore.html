@@ -32,7 +32,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="custom-bg">
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
@@ -46,37 +46,12 @@
         <div class="card">
             <div class="card-body">
                 <i class="material-icons" id="bookmark">favorite_border</i>
-                <h5 class="card-title"><span id="storeName">Store name</span></h5>
-                <h6 class="card-subtitle mb-2 text-muted"><span id="storeLocation">Location</span></h6>
-                <h6 class="card-subtitle mb-2 text-muted"><span id="storeStatus">Status</span></h6>
+                <h1 class="card-title"><span id="storeName">Store name</span></h1>
+                <p class="card-location"><span id="storeLocation">Location</span></p>
+                <h6 class="card-status"><span id="storeStatus">Status</span></h6>
                 <img class="card-img-top store-img" src="" alt="Store photo">
                 <p class="card-text"><span id="storeDetail"></span></p>
-                <button class="btn store-btn" onclick="saveStoreDocumentIDAndRedirect()">Update Status</button>
-            </div>
-        </div>
-
-    </template>
-
-    <!-- Updates Container -->
-    <!-- <div class="container">
-        <h2>Updates:</h2>
-        <div id="details-go-here"></div>
-        <div class="container">
-            <div id="statusCardGroup" class="row row-cols-auto">
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Status updates cards -->
-    <template id="statusCardTemplate">
-        <div class="card bg-secondary">
-            <img class="card-img-top">
-            <div class="card-body bg-light">
-                <h5 class="user">placeholder</h5>
-                <p class="time">placeholder</p>
-                <p class="status">placeholder</p>
-                <p class="reason">placeholder</p>
-                </p>
+                <button class="btn btn-primary w-100" onclick="saveStoreDocumentIDAndRedirect()">Update Status</button>
             </div>
         </div>
     </template>

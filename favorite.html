@@ -6,7 +6,7 @@
     <meta name="comp1800 project" content="GroSurrey Check">
 
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap Library CSS CDN go here -->
@@ -32,7 +32,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="custom-bg">
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
@@ -43,29 +43,28 @@
     <!-- Title Container -->
     <div class="container">
         <h2 class="title">
-            <span class="title-word title-word">Favorites of <span class="title-word title-word-5" id="name-goes-here"></span></span>
+            <span class="title-word title-word">Favorites of <span class="title-word title-word-5"
+                    id="name-goes-here"></span></span>
         </h2>
     </div>
 
-        <!-- Here is container for cards  -->
-        <div class="container">
-            <div id="storeCardGroup" class="row row-cols-auto">
-            </div>
+    <!-- Here is container for cards  -->
+    <div class="container">
+        <div id="storeCardGroup" class="row row-cols-auto">
+
+            <!-- cardtemplate -->
+            <template id="favoriteCardTemplate">
+                <div class="card py-2 mx-2 text-center" style="width: 50rem">
+                    <img class="card-image card-img-top" src="..." alt="...">
+                    <h1 class="card-title"></h1>
+                    <p class="card-location"></p>
+                    <p class="card-reason"></p>
+                    <p class="card-status"></p>
+                    <a class="btn btn-secondary card-href" id="read-more">CHECK!</a>
+                </div>
+            </template>
         </div>
     </div>
-
-    <!-- cardtemplate -->
-    <template id="favoriteCardTemplate">
-        <div class="card py-2 mx-2 text-center custom-bg" style="width: 50rem">
-            <img class="card-image card-img-top" src=" ..." alt="..." />
-            <h3 class="card-title"></h3>
-            <p class="card-location"></p>
-            <p class="card-reason"></p>
-            <p class="card-status"></p>
-            <a class="btn btn-secondary card-href" id="read-more">CHECK!</a>
-        </div>
-        </div>
-    </template>
 
     <!-- Footer -->
     <nav id="footerPlaceholder"></nav>

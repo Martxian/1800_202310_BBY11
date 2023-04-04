@@ -32,7 +32,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="custom-bg">
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
@@ -43,39 +43,44 @@
     <!-- Content goes here -->
     <div class="container">
         <br>
-        <h1><span id="storeName">Store Name</span></h1>
-        <h3><span id="storeLocation">Store Location</span></h3>
-        <br>
+        <div class="container-sm form-field mx-auto">
+            <h1><span id="storeName">Store Name</span></h1>
+            <h5><span id="storeLocation">Store Location</span></h5>
+        </div>
         <!-- Form for updating status -->
-        <form>
-            <!-- Status options -->
-            <label>Status: <span style="display:inline-block; width: 20pt;"></span></label>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="status" value="Open">
-                <label>Open</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="status" value="Closed">
-                <label>Closed</label>
-            </div>
-
-            <!-- Reason options -->
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">What is the reason?</label>
-                <select class="form-control" id="reason">
-                    <option>Snowfall</option>
-                    <option>Heatwave</option>
-                    <option>Tornado</option>
-                    <option>Earthquake</option>
-                    <option>Other</option>
-                </select>
+        <div class="form-field mx-auto">
+            <form>
+                <!-- Status options -->
+                <label class="justify-content-left">Status: <span style="display:inline-block; width: 20pt;"></span></label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status" value="Open">
+                    <label>Open</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status" value="Closed">
+                    <label>Closed</label>
+                </div>
+                <br/>
+                <br/>
+    
+                <!-- Reason options -->
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Status Reason (If open, select other.)</label>
+                    <select class="form-control" id="reason">
+                        <option>Snowfall</option>
+                        <option>Heatwave</option>
+                        <option>Tornado</option>
+                        <option>Earthquake</option>
+                        <option>Other</option>
+                    </select>
+                    <br>
+                </div>
                 <br>
-            </div>
-            <br>
-            <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-lg btn-primary pull-right" onclick="updateStatus()">Submit</button>
-            </div>
-        </form>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-lg btn-primary pull-right" onclick="updateStatus()">Submit</button>
+                </div>
+            </form>
+        </div> 
     </div>
 
     <!-- Footer -->
