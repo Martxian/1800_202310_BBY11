@@ -4,7 +4,7 @@ function writeStores() {
 
     // function to add an individual store
     storesRef.add({
-        code: "CSTCO1", 
+        code: "CSTCO1",
         name: "Costco Wholesale",
         location: "7423 King George Blvd, Surrey, BC V3W 5A8",
         city: "Surrey",

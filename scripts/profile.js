@@ -13,7 +13,7 @@ function populateUserInfo() {
                 var userAboutMe = userDoc.data().aboutme;
                 let picUrl = userDoc.data().profilePic;
 
-        //if the data fields are not empty, then write them in to the form.
+                //if the data fields are not empty, then write them in to the form.
                 if (email != null) {
                     document.getElementById("emailInput").value = email;
                 }

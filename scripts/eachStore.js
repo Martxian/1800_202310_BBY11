@@ -101,32 +101,3 @@ function saveStoreDocumentIDAndRedirect() {
         window.location.href = 'updateStatus.html';
     }
 }
-
-// function populateStatus() {
-//     let storeCardTemplate = document.getElementById("statusCardTemplate");
-//     let storeCardGroup = document.getElementById("statusCardGroup");
-
-//     let params = new URL(window.location.href) //get the url from the searbar
-//     let storeID = params.searchParams.get("id");
-
-//     db.collection("status").where("storeDocID", "==", storeID).get()
-//         .then(allStatus => {
-//             status = allStatus.docs;
-//             console.log(status.status);
-//             status.forEach(doc => {
-//                 var user = doc.data().userID; //gets the user
-//                 var status = doc.data().status; //gets the unique ID field
-//                 var time = doc.data().timestamp.toDate();
-//                 var reason = doc.data().reason;
-//                 console.log(time)
-
-//                 let statusCard = storeCardTemplate.content.cloneNode(true);
-//                 statusCard.querySelector('.user').innerHTML = user;     //equiv getElementByClassName
-//                 statusCard.querySelector('.time').innerHTML = new Date(time).toLocaleString();    //equiv getElementByClassName
-//                 statusCard.querySelector('.status').innerHTML = `status: ${status}`;
-//                 statusCard.querySelector('.reason').innerHTML = `reason: ${reason}`;
-//                 storeCardGroup.appendChild(statusCard);
-//             })
-//         })
-// }
-// populateStatus();
