@@ -36,12 +36,9 @@ a {
 
 .nav .logo {
   font-family: font2;
-  animation: color-animation 10s linear infinite;
-  --color-1: #0a5bc5;
-  --color-2: #f5faf6;
-  --color-3: #055a26;
-  --color-4: #f9fafa;
-  font-size: 22px;
+  text-transform: uppercas;
+  color:white;
+  font-size: 20px;
 }
 
 .nav .nav-links {
@@ -52,11 +49,8 @@ a {
 .nav .nav-links a {
   font-family: font2;
   text-transform: uppercase;
-  animation: color-animation 10s linear infinite;
-  --color-1: #0a5bc5;
-  --color-2: #f5faf6;
-  --color-3: #055a26;
-  --color-4: #f9fafa;
+  color:white;
+ 
 }
 
 .nav.openSearch .nav-links a {
