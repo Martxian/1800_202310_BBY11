@@ -19,8 +19,7 @@ h1 {
     background-size: 300%;
     background-position: left;
     transition: background-position 350ms;
-     margin-top: 20px;
-    
+    margin-top: 20px;
 }
 
 .btn:hover {
@@ -232,11 +231,6 @@ h1 {
     margin: 10px;
 }
 
-/* .container h1 {
-    font-size: large;
-    font-weight: 900;
-} */
-
 .card-status {
     color: #355834;
     font-weight: 900;
@@ -244,13 +238,8 @@ h1 {
 }
 
 .card-reason {
-    color: cyan;
+    color: rgba(16, 218, 154, 0.87);
     font-weight: 900;
-}
-
-.container span {
-    color: #355834;
-    font-weight: 1000;
 }
 
 /* profile.html */
