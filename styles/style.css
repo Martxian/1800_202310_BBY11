@@ -1,4 +1,9 @@
 /* General CSS */
+@font-face {
+    font-family: myFont;
+    src: url(/fonts/RibeyeMarrow-Regular.ttf);
+}
+
 h1 {
     text-align: center;
     font-size: clamp(20px, 6vw, 50px);
@@ -14,8 +19,8 @@ h1 {
     background-size: 300%;
     background-position: left;
     transition: background-position 350ms;
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
+     margin-top: 20px;
+    
 }
 
 .btn:hover {
@@ -74,10 +79,11 @@ h1 {
     display: flex;
     position: sticky;
     padding: 0px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .title-word {
+    font-family: myFont;
     animation: color-animation 7s linear infinite;
     --color-1: #0a5bc5;
     --color-2: #11916a;
@@ -125,8 +131,7 @@ h1 {
 }
 
 .title {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
-    font-weight: 600;
+    font-weight: 600px;
     font-size: 7vh;
     text-transform: uppercase;
 }
