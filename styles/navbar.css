@@ -15,7 +15,7 @@ body {
   left: 0;
   width: 100%;
   padding: 15px 200px;
-  background: #c8d6e5;
+  background: #5189c6;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -145,7 +145,7 @@ a {
     padding-top: 100px;
     row-gap: 30px;
     flex-direction: column;
-    background-color: #11101d;
+    background-color: #6D9FD9;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     z-index: 100;
