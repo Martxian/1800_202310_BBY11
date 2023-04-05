@@ -9,7 +9,7 @@ function populateUserInfo() {
                 //get the data fields of the user
                 var email = userDoc.data().email;
                 var userName = userDoc.data().name;
-                var displayAddress = userDoc.data().addess;
+                var displayAddress = userDoc.data().displayAddress;
                 var userAboutMe = userDoc.data().aboutme;
                 let picUrl = userDoc.data().profilePic;
 
@@ -68,29 +68,80 @@ function saveUserInfo() {
         var storage = firebase.storage();
         var storageRef = storage.ref("images/" + user.uid + ".jpg");
 
-        //Asynch call to put File Object (global variable ImageFile) onto Cloud
-        storageRef.put(ImageFile).then(function () {
-            //Asynch call to get URL from Cloud
-            storageRef.getDownloadURL().then(function (url) {
-                userName = document.getElementById("nameInput").value;
-                displayAddress = document.getElementById("displayAddress").value;
-                userAboutMe = document.getElementById("aboutMeInput").value;
-                //Asynch call to save the form fields into Firestore.
-                db.collection("users")
-                    .doc(user.uid)
-                    .update({
-                        name: userName,
-                        displayAddress: displayAddress,
-                        aboutme: userAboutMe,
-                        profilePic: url, // Save the URL into users collection
-                    })
-                    .then(function () {
-                        console.log("Saved user profile info");
-                        alert("Your Profile has been updated!");
-                    });
-                document.getElementById("personalInfoFields").disabled = true;
-                document.getElementById("mypic-input").value = "";
+        if (typeof ImageFile !== 'undefined') { // check if ImageFile is defined
+            // Asynch call to put File Object (global variable ImageFile) onto Cloud
+            storageRef.put(ImageFile).then(function () {
+                // Asynch call to get URL from Cloud
+                storageRef.getDownloadURL().then(function (url) {
+                    userName = document.getElementById("nameInput").value;
+                    displayAddress = document.getElementById("displayAddress").value;
+                    userAboutMe = document.getElementById("aboutMeInput").value;
+                    // Asynch call to save the form fields into Firestore.
+                    db.collection("users")
+                        .doc(user.uid)
+                        .update({
+                            name: userName,
+                            displayAddress: displayAddress,
+                            aboutme: userAboutMe,
+                            profilePic: url, // Save the URL into users collection
+                        })
+                        .then(function () {
+                            console.log("Saved user profile info");
+                            alert("Your Profile has been updated!");
+                        });
+                    document.getElementById("personalInfoFields").disabled = true;
+                    document.getElementById("mypic-input").value = "";
+                });
             });
-        });
+        } else {
+            // if ImageFile is not defined, only update the non-image user profile fields
+            userName = document.getElementById("nameInput").value;
+            displayAddress = document.getElementById("displayAddress").value;
+            userAboutMe = document.getElementById("aboutMeInput").value;
+            db.collection("users")
+                .doc(user.uid)
+                .update({
+                    name: userName,
+                    displayAddress: displayAddress,
+                    aboutme: userAboutMe
+                })
+                .then(function () {
+                    console.log("Saved user profile info");
+                    alert("Your Profile has been updated!");
+                });
+            document.getElementById("personalInfoFields").disabled = true;
+        }
     });
 }
+
+
+
+// function hasChanged() {
+//     const nameInput = document.getElementById("nameInput").value;
+//     const displayAddress = document.getElementById("displayAddress").value;
+//     const aboutMeInput = document.getElementById("aboutMeInput").value;
+
+//     const currentUser = firebase.auth().currentUser;
+//     db.collection("users")
+//         .doc(currentUser.uid)
+//         .get()
+//         .then((doc) => {
+//             const data = doc.data();
+//             if (
+//                 data.name === nameInput &&
+//                 data.displayAddress === displayAddress &&
+//                 data.aboutme === aboutMeInput &&
+//                 !ImageFile
+//             ) {
+//                 alert("No changes made.");
+//             } else {
+//                 saveUserInfo();
+//             }
+//         });
+// }
+
+// const saveButton = document.getElementById("save-button");
+// saveButton.addEventListener("click", function () {
+//     hasChanged();
+// });
+
