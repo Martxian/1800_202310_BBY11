@@ -29,7 +29,8 @@ function updateStatus() {
                 .doc(storeDocID)
                 .update({
                     status: Status,
-                    last_updated: firebase.firestore.FieldValue.serverTimestamp()
+                    last_updated: firebase.firestore.FieldValue.serverTimestamp(),
+                    reason: Reason
                 })
                 .then(() => {
                     db.collection("status").add({

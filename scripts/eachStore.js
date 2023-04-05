@@ -15,6 +15,7 @@ function displayStoreInfo() {
             storeName = doc.data().name;
             storeLocation = doc.data().location;
             storeStatus = doc.data().status;
+            statusReason = doc.data().reason;
 
             // create a container div with a unique ID for each store
             let storeContainer = document.createElement("div");
@@ -27,6 +28,7 @@ function displayStoreInfo() {
             storeCard.querySelector("#storeName").innerHTML = storeName;
             storeCard.querySelector("#storeLocation").innerHTML = storeLocation;
             storeCard.querySelector("#storeStatus").innerHTML = storeStatus;
+            storeCard.querySelector("#statusReason").innerHTML = statusReason;
             storeCard.querySelector(".store-img").src = "../images/" + storeCode + ".jpg";
             storeCard.querySelector("#bookmark").id = "save-" + ID;
             // storeCard.querySelector("#storeDetail").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ex vel felis molestie lobortis.";
