@@ -53,7 +53,7 @@
                 <!-- Status options -->
                 <label class="justify-content-left">Status: <span style="display:inline-block; width: 20pt;"></span></label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="status" value="Open">
+                    <input class="form-check-input" type="radio" name="status" value="Open" checked>
                     <label>Open</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -65,8 +65,9 @@
     
                 <!-- Reason options -->
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Status Reason (If open, select other.)</label>
+                    <label for="exampleFormControlSelect1">Status Reason (If open, select Clear.)</label>
                     <select class="form-control" id="reason">
+                        <option>Clear</option>
                         <option>Snowfall</option>
                         <option>Heatwave</option>
                         <option>Tornado</option>
