@@ -10,14 +10,14 @@
   src: url(/fonts/DMSans-Bold.ttf);
 }
 
-body, html{
+body,
+html {
   font-family: font2;
-
 }
 h1 {
   text-align: center;
   font-size: clamp(20px, 6vw, 50px);
-  color: #5189C6;
+  color: #5189c6;
 }
 
 .btn {
@@ -244,7 +244,7 @@ h1 {
 
 /* favorite.html */
 
-.title-fav{
+.title-fav {
   text-transform: uppercase;
   padding: 2px;
   color: #0a5bc5;
