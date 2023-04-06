@@ -1,7 +1,4 @@
-//----------------------------------------------------------
-// This function is the only function that's called.
-// This strategy gives us better control of the page.
-//----------------------------------------------------------
+//call the function
 function doAll() {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
@@ -14,11 +11,7 @@ function doAll() {
 }
 doAll();
 
-//----------------------------------------------------------
-// Wouldn't it be nice to see the User's Name on this page?
-// Let's do it!  (Thinking ahead:  This function can be carved out,
-// and put into script.js for other pages to use as well).
-//----------------------------------------------------------
+//show the user's name on favorite head
 function insertNameFromFirestore(user) {
     db.collection("users")
         .doc(user.uid)
@@ -31,17 +24,13 @@ function insertNameFromFirestore(user) {
         });
 }
 
-//----------------------------------------------------------
-// This function takes input param User's Firestore document pointer
-// and retrieves the "saved" array (of bookmarks)
-// and dynamically displays them in the gallery
-//----------------------------------------------------------
+//get favorites from the array in user database
 function getFavorites(user) {
     db.collection("users")
         .doc(user.uid)
         .get()
         .then((userDoc) => {
-            // Get the Array of bookmarks
+            // Get the Array of favorites
             var favorites = userDoc.data().favorites;
             console.log(favorites);
 
@@ -55,7 +44,7 @@ function getFavorites(user) {
                         statusMap[statusDoc.data().storeDocID] = statusDoc.data().reason;
                     });
 
-                    // Iterate through the ARRAY of bookmarked hikes (document ID's)
+                    // Iterate through the ARRAY of favorited store (document ID's)
                     favorites.forEach((thisStoreID) => {
                         db.collection("stores")
                             .doc(thisStoreID)

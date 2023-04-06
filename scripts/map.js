@@ -25,7 +25,7 @@ function showStoresOnMap() {
                 // Add the image to the map style.
                 map.addImage('eventpin', image); // Pin Icon
 
-                // READING information from "events" collection in Firestore
+                // READING information from "stores" collection in Firestore
                 db.collection("stores").get().then(allEvents => {
                     allEvents.forEach(doc => {
                         // get store Coordinates
@@ -72,7 +72,7 @@ function showStoresOnMap() {
                         }
                     });
 
-                    // Map On Click function that creates a popup, displaying previously defined information from "events" collection in Firestore
+                    // Map On Click function that creates a popup, displaying previously defined information from "stores" collection in Firestore
                     map.on('click', 'places', (e) => {
                         // Copy coordinates array.
                         const coordinates = e.features[0].geometry.coordinates.slice();

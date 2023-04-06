@@ -5,7 +5,7 @@ function displayStoreInfo() {
     let ID = params.searchParams.get("id"); //get value for key "id"
     console.log(ID);
 
-    // doublecheck: is your collection called "Stores" or "stores"?
+    // get the information from stores database in firestore
     db.collection("stores")
         .doc(ID)
         .get()
@@ -31,7 +31,7 @@ function displayStoreInfo() {
             storeCard.querySelector("#statusReason").innerHTML = statusReason;
             storeCard.querySelector(".store-img").src = "../images/" + storeCode + ".jpg";
             storeCard.querySelector("#bookmark").id = "save-" + ID;
-            // storeCard.querySelector("#storeDetail").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ex vel felis molestie lobortis.";
+            
 
             storeContainer.appendChild(storeCard);
             document.querySelector("#storeContainer").appendChild(storeContainer);
@@ -56,12 +56,8 @@ displayStoreInfo();
 
 var currentUser;
 
-//-----------------------------------------------------------------------------
-// This function is called whenever the user clicks on the "bookmark" icon.
-// It adds the stores to the "bookmarks" array
-// Then it will change the bookmark icon from the hollow to the solid version.
-//-----------------------------------------------------------------------------
-// Function to toggle bookmark status
+
+// Function to toggle favavorite status
 function toggleBookmark(ID) {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
