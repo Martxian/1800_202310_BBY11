@@ -115,31 +115,3 @@ function saveUserInfo() {
   });
 }
 
-// function hasChanged() {
-//     const nameInput = document.getElementById("nameInput").value;
-//     const displayAddress = document.getElementById("displayAddress").value;
-//     const aboutMeInput = document.getElementById("aboutMeInput").value;
-
-//     const currentUser = firebase.auth().currentUser;
-//     db.collection("users")
-//         .doc(currentUser.uid)
-//         .get()
-//         .then((doc) => {
-//             const data = doc.data();
-//             if (
-//                 data.name === nameInput &&
-//                 data.displayAddress === displayAddress &&
-//                 data.aboutme === aboutMeInput &&
-//                 !ImageFile
-//             ) {
-//                 alert("No changes made.");
-//             } else {
-//                 saveUserInfo();
-//             }
-//         });
-// }
-
-// const saveButton = document.getElementById("save-button");
-// saveButton.addEventListener("click", function () {
-//     hasChanged();
-// });
