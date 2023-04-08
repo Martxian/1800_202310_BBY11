@@ -40,33 +40,47 @@ Content of the project folder:
 
 ```
  Top level of project folder: 
+├── .firebaserc                  # Firebase
 ├── .gitignore                   # Git ignore file
+├── 404.html                     # 404 not found page
 ├── aboutUs.html                 # About Us page, shows creators
 ├── eachStore.html               # Individual store page, shows individual store pages
 ├── favorite.html                # Favorites page, shows user's favorites
+├── firebase.json                # Firebase JSON file
+├── firebase.indexes.json        # Firebase Index file
+├── firestore.rules              # Firestore rules file
 ├── home.html                    # Home page
 ├── index.html                   # Landing page, this is what users see when you come to url
 ├── login.html                   # Login page, where users login
 ├── map.html                     # Map page, shows map view
 ├── profile.html                 # Profile page, shows user profile
+├── README.md                    # README file
+├── storage.rules                # Firestore storage rules file
 ├── thanks.html                  # Thank you page, thanks users for updating status
-├── updateStatus.html            # Update Status page, where users update store status 
-└── README.md
+└── updateStatus.html            # Update Status page, where users update store status 
 
 It has the following subfolders and files:
-├── .git                         # Folder for git repo
+├── fonts                        # Folder for images
+|    ├── DMSans-Bold.ttf             # Source: Google Fonts
+|    ├── DMSans-BoldItalic.ttf       # Source: Google Fonts
+|    ├── Volkhov-Regular.ttf         # Source: Google Fonts
+|    ├── VolkhovSC-SemiBold.ttf      # Source: Google Fonts
 ├── images                       # Folder for images
+|    ├── background.jpeg             # Source: Google Images
+|    ├── background2.jpeg            # Source: Google Images
 │    ├── CSTCO1.jpg                  # Source: Google Images
-│    ├── default.jpg                 # Source:Google Images
+│    ├── default.jpg                 # Source: Google Images
+|    ├── grocery.jpeg                # Source: Google Images
+|    ├── grocery3.jpeg               # Source: Google Images
 │    ├── logo.png                    # Source: Personal logo
 │    ├── marvin.jpg                  # Source: Marvin
 │    ├── me.jpg                      # Source: Kenneth
 │    ├── mun.jpg                     # Source: Mun Young
-│    ├── SOF1.jpg                    # Source:Google Images
-│    ├── SOF2.jpg                    # Source:Google Images
-│    ├── SOF3.jpg                    # Source:Google Images
-│    ├── SOF4.jpg                    # Source:Google Images
-│    └── WLMRT1.jpg                  # Source:Google Images
+│    ├── SOF1.jpg                    # Source: Google Images
+│    ├── SOF2.jpg                    # Source: Google Images
+│    ├── SOF3.jpg                    # Source: Google Images
+│    ├── SOF4.jpg                    # Source: Google Images
+│    └── WLMRT1.jpg                  # Source: Google Images
 ├── scripts                      # Folder for scripts
 │    ├── addStore.js                 # JS file to add stores
 │    ├── authentication.js           # JS file for authentication
